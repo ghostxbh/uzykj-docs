@@ -1,0 +1,185 @@
+# 安装RabbitMQ
+- [Docker安装RabbitMQ](#docker%E5%AE%89%E8%A3%85rabbitmq)
+  - [安装](#%E5%AE%89%E8%A3%85)
+    - [获取列表](#%E8%8E%B7%E5%8F%96%E5%88%97%E8%A1%A8)
+    - [拉取镜像](#%E6%8B%89%E5%8F%96%E9%95%9C%E5%83%8F)
+    - [查看镜像列表](#%E6%9F%A5%E7%9C%8B%E9%95%9C%E5%83%8F%E5%88%97%E8%A1%A8)
+    - [运行](#%E8%BF%90%E8%A1%8C)
+    - [查看运行](#%E6%9F%A5%E7%9C%8B%E8%BF%90%E8%A1%8C)
+    - [默认端口列表](#%E9%BB%98%E8%AE%A4%E7%AB%AF%E5%8F%A3%E5%88%97%E8%A1%A8)
+    - [client](#client)
+    - [访问](#%E8%AE%BF%E9%97%AE)
+    - [日志查看](#%E6%97%A5%E5%BF%97%E6%9F%A5%E7%9C%8B)
+    - [容器内部](#%E5%AE%B9%E5%99%A8%E5%86%85%E9%83%A8)
+  - [相关资料](#%E7%9B%B8%E5%85%B3%E8%B5%84%E6%96%99)
+
+
+- 运行各种镜像时，外网需要访问，需要开放防火墙端口。
+阿里云、腾讯云可使用端口安全组，
+可以使用linux防火墙命令: `firewall-cmd --zone=public --add-port=8080/tcp --permanent`，
+也可以通过三方linux管理面板进行端口放行
+
+## 安装
+### 获取列表
+```shell
+$ docker search rabbitmq
+
+NAME                                        DESCRIPTION                                     STARS               OFFICIAL            AUTOMATED
+rabbitmq                                    RabbitMQ is an open source multi-protocol me…   3456                [OK]
+bitnami/rabbitmq                            Bitnami Docker Image for RabbitMQ               55                                      [OK]
+tutum/rabbitmq                              Base docker image to run a RabbitMQ server      21
+kbudde/rabbitmq-exporter                    rabbitmq_exporter for prometheus                13                                      [OK]
+frodenas/rabbitmq                           A Docker Image for RabbitMQ                     12                                      [OK]
+cyrilix/rabbitmq-mqtt                       RabbitMQ MQTT Adapter                           9                                       [OK]
+```
+
+### 拉取镜像
+```shell
+# 获取最新management版本
+$ docker pull rabbitmq:management
+
+# 获取指定版本
+$ docker pull rabbitmq:3.8-management
+
+# 获取最新
+$ docker pull rabbitmq:latest
+```
+
+### 查看镜像列表
+```shell
+$ docker images
+
+
+REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
+rabbitmq            management          263c941f71ea        7 days ago          186MB
+```
+
+### 运行
+```shell
+# 运行
+$ docker run -d --name my-rabbitmq -p 5672:5672 -p 15672:15672 rabbitmq:management
+
+# 可选参数
+-v `pwd`/data:/var/lib/rabbitmq
+
+-e RABBITMQ_DEFAULT_VHOST=my_vhost
+
+-e RABBITMQ_DEFAULT_USER=root
+
+-e RABBITMQ_DEFAULT_PASS=root
+
+--hostname myRabbitmq
+```
+注意：需要运行`rabbitmq:management`版本才会有web管理界面
+
+- `--name`: 容器名称
+- `-d`: 后台运行，以守护进程运行
+- `-p`: 指定端口，[docker内部端口号]:[宿主机端口号]。`rabbitmq`默认使用15672为web管理界面端口，5672为数据通信端口
+- `-v`: 映射目录、文件
+- `-e`: 指定环境变量。`RABBITMQ_DEFAULT_VHOST`: 默认虚拟机名, `RABBITMQ_DEFAULT_USER`: 默认的用户名, `RABBITMQ_DEFAULT_PASS`：默认用户名的密码
+- `--hostname`: 主机名。`rabbitmq`的一个重要注意事项是它根据所谓的 “节点名称” 存储数据，默认为主机名
+
+### 查看运行
+```shell
+$ docker ps
+
+CONTAINER ID        IMAGE                 COMMAND                  CREATED             STATUS              PORTS                                                                                                         NAMES
+3a2331f7d868        rabbitmq:management   "docker-entrypoint.s…"   41 minutes ago      Up 41 minutes       4369/tcp, 5671/tcp, 0.0.0.0:5672->5672/tcp, 15671/tcp, 15691-15692/tcp, 25672/tcp, 0.0.0.0:15672->15672/tcp   myRabbitmq
+```
+
+### 默认端口列表
+```
+# Erlang 发现端口
+4369 (epmd), 25672 (Erlang distribution)
+
+# rabbitmq数据通信端口
+5672, 5671 (AMQP 0-9-1 without and with TLS)
+
+# web管理访问端口
+15672 (if management plugin is enabled)
+
+# server间内部通信口
+25672 (management server port)
+
+# STOMP 启用端口
+61613, 61614 (if STOMP is enabled)
+
+# MQTT 启用端口
+1883, 8883 (if MQTT is enabled)
+```
+
+### client
+```url
+server:amqp://guest:gutest@localhost:5672/
+```
+
+### 访问
+
+放行外网端口后，浏览器访问[http://127.0.0.1:15672](http://127.0.0.1:15672)。注意`rabbitmq`需要放行15672，5672的端口。默认账号密码为`guest`
+
+![rabbitmq](http://file.uzykj.com/rabbitmq_management.png)
+
+### 日志查看
+```shell
+$ docker logs -f myRabbitmq
+```
+![start](http://file.uzykj.com/docker_rabbitmq_logs.png)
+
+### 容器内部
+```shell
+$ docker exec -i -t myRabbitmq bin/bash
+```
+- 添加用户
+```shell
+$ rabbitmqctl add_user root root
+
+Adding user "root" ...
+```
+
+- 权限设置
+```shell
+# 设置root所有权限
+# 第一个“.*”用于配置每个实体的权限
+# 第二个“.*”用于对每个实体的写权限
+# 第三个“.*”用于对每个实体的读权限
+
+$ rabbitmqctl set_permissions -p / root ".*" ".*" ".*"
+
+Setting permissions for user "root" in vhost "/" ...
+```
+
+- 添加角色
+```shell
+$ rabbitmqctl set_user_tags root administrator
+
+Setting tags for user "root" to [administrator] ...
+```
+
+- 查看
+```shell
+$ rabbitmqctl list_users
+
+Listing users ...
+user	tags
+guest	[administrator]
+root	[administrator]
+```
+
+- 删除用户
+```shell
+$ rabbitmqctl delete_user root
+
+Deleting user "root" ...
+```
+
+- 退出容器
+
+使用`exit`命令，即可退出
+
+
+## 相关资料
+- [rabbitmq安装](https://hub.docker.com/_/rabbitmq?tab=description&page=1&ordering=last_updated)
+- [rabbitmq设置](https://www.rabbitmq.com/access-control.html)
+
+
+<Vssue :title="$title" />

@@ -1,0 +1,166 @@
+# CentOS环境安装
+- [CentOS环境安装Docker](#centos%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85docker)
+  - [安装](#%E5%AE%89%E8%A3%85)
+    - [更新yum](#%E6%9B%B4%E6%96%B0yum)
+    - [卸载旧版本docker安装包](#%E5%8D%B8%E8%BD%BD%E6%97%A7%E7%89%88%E6%9C%ACdocker%E5%AE%89%E8%A3%85%E5%8C%85)
+    - [安装软件包](#%E5%AE%89%E8%A3%85%E8%BD%AF%E4%BB%B6%E5%8C%85)
+    - [添加yum源仓库](#%E6%B7%BB%E5%8A%A0yum%E6%BA%90%E4%BB%93%E5%BA%93)
+    - [安装Docker](#%E5%AE%89%E8%A3%85docker)
+    - [升级docker](#%E5%8D%87%E7%BA%A7docker)
+    - [脚本安装](#%E8%84%9A%E6%9C%AC%E5%AE%89%E8%A3%85)
+  - [启动停止](#%E5%90%AF%E5%8A%A8%E5%81%9C%E6%AD%A2)
+    - [启动](#%E5%90%AF%E5%8A%A8)
+    - [停止](#%E5%81%9C%E6%AD%A2)
+    - [重启](#%E9%87%8D%E5%90%AF)
+    - [运行](#%E8%BF%90%E8%A1%8C)
+  - [卸载](#%E5%8D%B8%E8%BD%BD)
+    - [卸载docker](#%E5%8D%B8%E8%BD%BDdocker)
+    - [删除镜像、容器、文件等](#%E5%88%A0%E9%99%A4%E9%95%9C%E5%83%8F%E5%AE%B9%E5%99%A8%E6%96%87%E4%BB%B6%E7%AD%89)
+  - [参考](#%E5%8F%82%E8%80%83)
+
+## 安装
+
+### 更新yum
+```shell
+# 保证最新yum
+sudo yum install update
+```
+
+### 卸载旧版本docker安装包
+```shell
+sudo yum remove docker \
+          docker-client \
+          docker-client-latest \
+          docker-common \
+          docker-latest \
+          docker-latest-logrotate \
+          docker-logrotate \
+          docker-engine
+```
+通常docker文件存在于`/var/lib/docker/`目录下
+
+### 安装软件包
+```shell
+sudo yum install -y yum-utils device-mapper-persistent-data lvm2
+```
+`yum-utils` 提供了 `yum-config-manager` ，并且 `device mapper` 存储驱动程序需要 `device-mapper-persistent-data` 和 `lvm2`。
+
+- device mapper
+
+`Device Mapper` 是 Linux2.6 内核中支持逻辑卷管理的通用设备映射机制，它为实现用于存储资源管理的块设备驱动提供了一个高度模块化的内核架构。
+
+- LVM（Logical Volume Manager）逻辑卷管理。
+
+它是对磁盘分区进行管理的一种机制，建立在硬盘和分区之上的一个逻辑层，用来提高磁盘管理的灵活性。通过LVM可将若干个磁盘分区连接为一个整块的卷组(`Volume Group`)，形成一个存储池。可以在卷组上随意创建逻辑卷(`Logical Volumes`)，并进一步在逻辑卷上创建文件系统，与直接使用物理存储在管理上相比，提供了更好灵活性。
+
+`device-mapper-persistent-data` 和 `lvm2`
+两者都是`Device Mapper`所需要的。
+
+### 添加yum源仓库
+```shell
+sudo yum-config-manager \
+    --add-repo \
+    https://download.docker.com/linux/centos/docker-ce.repo
+```
+
+- 阿里源
+```shell
+yum config-manager -add-repo https://mirrors.aliyun.com/docker-ce/linux/centos/docker-ce.repo
+```
+- 可选：启用每晚或测试存储库。
+
+这些存储库包含在docker.repo上面的文件中，但默认情况下处于禁用状态。您可以在稳定存储库旁边启用它们。以下命令启用每晚存储库。
+```shell
+sudo yum-config-manager --enable docker-ce-nightly
+```
+要启用测试通道，请运行以下命令：
+```shell
+sudo yum-config-manager --enable docker-ce-test
+```
+您可以通过运行带有`yum-config-manager`标志，`--disable`命令来禁用夜间或测试存储库。`--enable`要重新启用它，请使用该标志。以下命令禁用夜间存储库。
+
+```shell
+sudo yum-config-manager --disable docker-ce-nightly
+```
+
+### 安装Docker
+```shell
+sudo yum install docker-ce docker-ce-cli containerd.io
+```
+或者
+```shell
+# 清除yum缓存
+yum clean all
+
+# 重新加载yum源
+yum makecache
+
+# 安装docker
+yum install docker-ce
+```
+
+- 安装特定版本的docker
+```shell
+# 查看版本
+yum list docker-ce --showduplicates | sort -r
+
+docker-ce.x86_64  3:18.09.1-3.el7                     docker-ce-stable
+docker-ce.x86_64  3:18.09.0-3.el7                     docker-ce-stable
+docker-ce.x86_64  18.06.1.ce-3.el7                    docker-ce-stable
+docker-ce.x86_64  18.06.0.ce-3.el7                    docker-ce-stable
+
+# 安装指定版本
+sudo yum install docker-ce-<VERSION_STRING> docker-ce-cli-<VERSION_STRING> containerd.io
+```
+
+### 升级docker
+请下载更新的软件包文件，并使用 `yum -y upgrade` 代替重复 ` yum -y install` 安装过程，并指向新文件。
+
+### 脚本安装
+```shell
+# 下载脚本
+curl -fsSL https://get.docker.com -o get-docker.sh
+
+# 执行脚本
+sudo sh get-docker.sh
+```
+
+## 启动停止
+
+### 启动
+```shell
+sudo systemctl start docker
+```
+
+### 停止
+```shell
+sudo systemctl stop docker
+```
+
+### 重启
+```shell
+sudo systemctl restart docker
+```
+
+### 运行
+```shell
+sudo docker run hello-world
+```
+
+## 卸载
+
+### 卸载docker
+```shell
+sudo yum remove docker-ce docker-ce-cli containerd.io
+```
+
+### 删除镜像、容器、文件等
+```shell
+sudo rm -rf /var/lib/docker
+```
+
+## 参考
+
+- [docker安装](https://docs.docker.com/engine/install/centos/)
+
+<Vssue :title="$title" />
