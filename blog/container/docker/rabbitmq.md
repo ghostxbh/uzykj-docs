@@ -181,5 +181,7 @@ Deleting user "root" ...
 - [rabbitmq安装](https://hub.docker.com/_/rabbitmq?tab=description&page=1&ordering=last_updated)
 - [rabbitmq设置](https://www.rabbitmq.com/access-control.html)
 
+---
+收录时间: 2020/12/03
 
 <Vssue :title="$title" />

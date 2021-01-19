@@ -163,4 +163,7 @@ sudo rm -rf /var/lib/docker
 
 - [docker安装](https://docs.docker.com/engine/install/centos/)
 
+---
+收录时间: 2020/12/02
+
 <Vssue :title="$title" />

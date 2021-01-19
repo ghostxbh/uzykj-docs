@@ -119,3 +119,8 @@ public String getenv() {
 
 ### 源码地址
 [springboot-value](https://github.com/ghostxbh/spring-boot-example/tree/master/boot01)
+
+---
+收录时间: 2019/08/08
+
+<Vssue :title="$title" />
