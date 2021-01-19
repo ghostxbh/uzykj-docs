@@ -17,3 +17,8 @@ props: ['msg', 'title', 'run', 'home']
 <p>{{title}}</p>
 <button @click="run('子组件参数')">执行run方法</button>
 ```
+
+---
+收录时间: 2019/07/11
+
+<Vssue :title="$title" />

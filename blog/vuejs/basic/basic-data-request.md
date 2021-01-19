@@ -80,3 +80,8 @@ FetchJsonp(api)
 
 ## 源码示例
 [vue数据请求](https://github.com/ghostxbh/VUE-Study/tree/master/vuedemo/demo09)
+
+---
+收录时间: 2019/07/11
+
+<Vssue :title="$title" />

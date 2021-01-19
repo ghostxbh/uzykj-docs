@@ -210,3 +210,8 @@ HTML所有的代码需有一个根包裹起来 `<div id="app">`
 
 ## 参考资料
 [模版语法](https://cn.vuejs.org/v2/guide/syntax.html)
+
+---
+收录时间: 2019/06/26
+
+<Vssue :title="$title" />

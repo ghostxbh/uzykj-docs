@@ -141,3 +141,8 @@ template模版中切记使用一个根节点包裹html代码
 
 ## 源码示例
 [vue组件](https://github.com/ghostxbh/VUE-Study/tree/master/vuedemo/demo07)
+
+---
+收录时间: 2019/07/01
+
+<Vssue :title="$title" />

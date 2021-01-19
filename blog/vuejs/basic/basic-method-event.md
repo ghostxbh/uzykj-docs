@@ -324,3 +324,8 @@ Vue.config.keyCodes.f1 = 112
 
 ## 源码示例
 [vue事件](https://github.com/ghostxbh/VUE-Study/tree/master/vuedemo/demo05)
+
+---
+收录时间: 2019/06/26
+
+<Vssue :title="$title" />

@@ -99,3 +99,8 @@
 
 ## 参考资料
 [属性绑定](https://cn.vuejs.org/v2/guide/class-and-style.html)
+
+---
+收录时间: 2019/06/21
+
+<Vssue :title="$title" />

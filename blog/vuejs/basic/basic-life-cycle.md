@@ -37,3 +37,9 @@ destroyed() {
 
 ## 源码示例
 [vue生命周期](https://github.com/ghostxbh/VUE-Study/tree/master/vuedemo/demo08)
+
+
+---
+收录时间: 2019/07/11
+
+<Vssue :title="$title" />

@@ -95,5 +95,9 @@ npm install -g cnpm --registry=https://registry.npm.taobao.org
 ### 参考资料
 [vuejs安装](https://cn.vuejs.org/v2/guide/installation.html)
 
+---
+收录时间: 2019/06/21
+
 <Vssue :title="$title" />
+
 
