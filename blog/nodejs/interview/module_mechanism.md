@@ -67,7 +67,7 @@ Node.js 模块机制采用了 Commonjs 规范，弥补了当前 JavaScript 开�
 
 *   **node_modules 目录加载**：对于系统模块、路径文件模块都找不到，Node.js 会从当前模块的父目录进行查找，直到系统的根目录
 
-![image](https://upload-images.jianshu.io/upload_images/14305495-16870418bd44064c?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![image](http://file.uzykj.com/f0f9ca39-30b5-96ae-4a9b-8913ffe73c69.png)
 
 require 模块加载时序图
 
@@ -93,7 +93,7 @@ console.log(require.cache);
 ```
 在这个文件里加载 test-module.js 文件，在之后打印下 require.cache 看下里面返回的是什么？看到以下结果应该就很清晰了，模块的文件名、地址、导出数据都很清楚。
 
-![image](https://upload-images.jianshu.io/upload_images/14305495-c5b7780c6373a216?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![image](http://file.uzykj.com/3faf2b91-6ba3-9be6-ec6f-eb51fa7e8b53.png)
 
 ## 模块循环引用
 
