@@ -14,7 +14,9 @@ on the id, causes it to use the underlying db’s auto increment and not try to 
 
 在主键上面添加自增策略
 
+```java
 @GeneratedValue(strategy = GenerationType.IDENTITY)
+```
 
 即可完美解决
 
