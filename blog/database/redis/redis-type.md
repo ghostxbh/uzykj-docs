@@ -1,6 +1,6 @@
 # Redis类型
 
-![p](http://file.uzykj.com/48040a58-df90-9fa5-232c-4f915d4598d0.png)
+<img src="http://file.uzykj.com/48040a58-df90-9fa5-232c-4f915d4598d0.png" height=50% width=50%>
 
 - string
 - list
@@ -94,7 +94,8 @@ SETNX product:1 ture ex 10 nx
 防止程序意外终止导致死锁
 
 - 计数器
-![p](http://file.uzykj.com/828c9f8a-8f0a-588e-22cd-95df1c8ec11f.png)
+
+<img src="http://file.uzykj.com/828c9f8a-8f0a-588e-22cd-95df1c8ec11f.png" height=50% width=50%>
 
 ```shell script
 INCR article:readcount:{文章ID}
@@ -159,10 +160,15 @@ HINCRBY key field increment
 
 ### 应用场景
 - 对象缓存
+
 MySQL表
-![p](http://file.uzykj.com/279e7f90-e21f-662e-3fc8-1f3cf66ad2eb.png)
+
+<img src="http://file.uzykj.com/279e7f90-e21f-662e-3fc8-1f3cf66ad2eb.png" height=50% width=50%>
+
 转换
-![p](http://file.uzykj.com/a11169e9-4cde-32bf-5b9c-189a5499ed7a.png)
+
+<img src="http://file.uzykj.com/a11169e9-4cde-32bf-5b9c-189a5499ed7a.png" height=50% width=50%>
+
 
 ```
 HMSET user {userId}:name 姓名 {userId}:balance 余额
@@ -180,10 +186,11 @@ localhost:0>HMGET user 10:name 10:balance
 ```
 
 - 电商购物车
-![p](http://file.uzykj.com/7868a794-72c1-240e-48e0-78e069a271d5.png)
     + 以用户ID为key
     + 商品ID为field
     + 商品数量为value
+
+<img src="http://file.uzykj.com/7868a794-72c1-240e-48e0-78e069a271d5.png" height=50% width=50%>
     
 ```
 // 添加一个商品A
@@ -240,7 +247,7 @@ localhost:0>HGETALL cart:101
     + 过期功能只能使用在key上，不能作用在field上
     + Redis不适合在集群架构上大规模使用
 
-![p](http://file.uzykj.com/44c33cce-d4a3-f898-8e9e-2223d0ffd765.png)
+<img src="http://file.uzykj.com/44c33cce-d4a3-f898-8e9e-2223d0ffd765.png" height=50% width=50%>
 
 ## list
 
@@ -269,7 +276,8 @@ BRPOP key [key...] timeout
 ```
 
 ### 应用场景
-![p](http://file.uzykj.com/a8cddafa-6e44-ab6f-4dda-b60188611817.png)
+
+<img src="http://file.uzykj.com/a8cddafa-6e44-ab6f-4dda-b60188611817.png" height=50% width=50%>
 
 - 常用数据结构
 栈：      Stack = LPUSH + LPOP -> FILO(先进后出)
