@@ -1,6 +1,6 @@
 # Redis类型
 
-<img src="http://file.uzykj.com/48040a58-df90-9fa5-232c-4f915d4598d0.png" height=50% width=50%>
+<img src="http://file.uzykj.com/48040a58-df90-9fa5-232c-4f915d4598d0.png" width=50%>
 
 - string
 - list
@@ -56,6 +56,7 @@ DECRBY key decrement
 ```shell
 # SET key value
 
+# redis shell
 localhost:0>SET test 我是一个value
 "OK"
 ```
@@ -65,7 +66,7 @@ localhost:0>SET test 我是一个value
 # SET object:1 value(json数据)
 
 # redis shell
-localhost:0>SET object:1 "{\"name\": \"Xiaoming\", \"age\": 18}\"
+localhost:0>SET object:1 \"{\"name\": \"Xiaoming\", \"age\": 18}\"
 "OK"
 ```
 
@@ -95,7 +96,7 @@ SETNX product:1 ture ex 10 nx
 
 - 计数器
 
-<img src="http://file.uzykj.com/828c9f8a-8f0a-588e-22cd-95df1c8ec11f.png" height=50% width=50%>
+<img src="http://file.uzykj.com/828c9f8a-8f0a-588e-22cd-95df1c8ec11f.png" width=50%>
 
 ```shell script
 INCR article:readcount:{文章ID}
@@ -163,11 +164,11 @@ HINCRBY key field increment
 
 MySQL表
 
-<img src="http://file.uzykj.com/279e7f90-e21f-662e-3fc8-1f3cf66ad2eb.png" height=50% width=50%>
+<img src="http://file.uzykj.com/279e7f90-e21f-662e-3fc8-1f3cf66ad2eb.png" width=50%>
 
 转换
 
-<img src="http://file.uzykj.com/a11169e9-4cde-32bf-5b9c-189a5499ed7a.png" height=50% width=50%>
+<img src="http://file.uzykj.com/a11169e9-4cde-32bf-5b9c-189a5499ed7a.png" width=50%>
 
 
 ```
@@ -190,7 +191,7 @@ localhost:0>HMGET user 10:name 10:balance
     + 商品ID为field
     + 商品数量为value
 
-<img src="http://file.uzykj.com/7868a794-72c1-240e-48e0-78e069a271d5.png" height=50% width=50%>
+<img src="http://file.uzykj.com/7868a794-72c1-240e-48e0-78e069a271d5.png" width=50%>
     
 ```
 // 添加一个商品A
@@ -247,7 +248,7 @@ localhost:0>HGETALL cart:101
     + 过期功能只能使用在key上，不能作用在field上
     + Redis不适合在集群架构上大规模使用
 
-<img src="http://file.uzykj.com/44c33cce-d4a3-f898-8e9e-2223d0ffd765.png" height=50% width=50%>
+<img src="http://file.uzykj.com/44c33cce-d4a3-f898-8e9e-2223d0ffd765.png" width=50%>
 
 ## list
 
@@ -277,12 +278,154 @@ BRPOP key [key...] timeout
 
 ### 应用场景
 
-<img src="http://file.uzykj.com/a8cddafa-6e44-ab6f-4dda-b60188611817.png" height=50% width=50%>
+<img src="http://file.uzykj.com/a8cddafa-6e44-ab6f-4dda-b60188611817.png" width=50%>
 
 - 常用数据结构
+
 栈：      Stack = LPUSH + LPOP -> FILO(先进后出)
+
 队列：    Queue = LPUSH + RPOP
+
 阻塞队列： Blocking Queue = LPUSH + BRPOP
+
+- 微博、公众号消息
+userA 关注 美团技术、 阿里技术 大V微博/公众号
+
+1、美团技术 发博文，博文ID: 8080
+```
+LPUSH msg:{userAID} 8080
+
+# redis shell
+localhost:0>LPUSH msg:A001 8080
+"1"
+```
+
+2、阿里技术 发博文，博文ID: 7070
+```
+LPUSH msg:{userAID} 7070
+
+# redis shell
+localhost:0>LPUSH msg:A001 7070
+"2"
+```
+
+3、获取最新博文
+```
+LRANGE msg:{userAID} 0 5
+
+# redis shell
+localhost:0>LRANGE msg:A001 0 5
+ 1)  "7072"
+ 2)  "7071"
+ 3)  "8082"
+ 4)  "8081"
+ 5)  "7070"
+ 6)  "8080"
+```
+`LRANGE`拿出来的数据，偏移量0到5的列表
+
+符合先进后出，按最后添加的时间排序。
+
+如果使用MySQL则需要`order by createTime DESC`,降低了查询性能
+
+## set
+
+### 常用操作
+```
+// 往集合key添加元素，member存在则忽略，不存在则新建
+SADD key member [member...]
+
+// 从集合key中删除元素
+SREM key member [member...]
+
+// 获取集合key中所有的元素
+SMEMBERS key
+
+// 获取集合key中的元素个数
+SCARD key
+
+// 判断集合key中是否存在member元素
+SISMEMBER key member
+
+// 从集合key中选出count个元素，count个元素不被删除
+SRANDMEMBER key [count]
+
+// 从集合key中选出count个元素，count个元素被删除
+SPOP key [count]
+```
+
+### 运算操作
+```
+// 交集运算
+SINTER key [key...]
+
+// 将交集储存到新集合destination中
+SINTERSTORE destination key [key...]
+
+// 并集运算
+SUNION key [key...]
+
+// 将并集储存到新集合destination中
+SUNIONSTORE destination key [key...]
+
+// 差集运算
+SDIFF key [key...]
+
+// 将差集储存到新集合destination中
+SDIFFSTORE destination key [key...]
+```
+
+### 应用场景
+- 微信抽奖小程序
+
+<img src="http://file.uzykj.com/5b294b9a-bd6e-65c6-3160-474b8a520181.png" width=50%>
+
+1、点击参与抽奖的用户加入到集合
+```
+// 添加参与抽奖的用户ID
+SADD key {用户ID...}
+
+# redis shell
+localhost:0>SADD lottery 1001 1002 1003
+"3"
+```
+
+2、获取所有参与抽奖的用户
+```
+SMEMBERS key
+
+# redis shell
+localhost:0>SMEMBERS lottery
+ 1)  "1001"
+ 2)  "1002"
+ 3)  "1003"
+```
+
+3、抽取count名幸苦参与者
+```
+SRANDMENBER key count / SPOP key count
+
+# redis shell
+# 保留元素
+localhost:0>SRANDMEMBER lottery 1
+ 1)  "1002"
+
+# 删除元素
+localhost:0>SPOP lottery 2
+ 1)  "1002"
+ 2)  "1001"
+```
+
+- 微信、微博点赞、收藏、标签
+1、点赞
+```
+SADD like:{文章ID} 用户ID
+
+localhost:0>SADD like:A001 1001
+"1"
+```
+
+
 
 
 ---
