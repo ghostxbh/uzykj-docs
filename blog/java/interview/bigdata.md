@@ -6,8 +6,8 @@
 
 ## 思路
 大数据问题的思想都是**分治法**，网上找了两篇答案
-- 1：https://blog.csdn.net/Fly_as_tadpole/article/details/88375809
-- 2：https://blog.csdn.net/niaolianjiulin/article/details/76129578
+- 1：[https://blog.csdn.net/Fly_as_tadpole/article/details/88375809](https://blog.csdn.net/Fly_as_tadpole/article/details/88375809)
+- 2：[https://blog.csdn.net/niaolianjiulin/article/details/76129578](https://blog.csdn.net/niaolianjiulin/article/details/76129578)
 
 海量数据的核心思想是**分治法**，简单来说就是空间不够，方法来凑
 

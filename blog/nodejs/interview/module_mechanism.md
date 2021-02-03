@@ -161,7 +161,7 @@ modules.exports = {
 }
 ```
 
-更好的理解之间的关系，可以参考 JavaScript 中的对象引用 https://www.nodejs.red/#/javascript/object
+更好的理解之间的关系，可以参考 JavaScript 中的对象引用 [https://www.nodejs.red/#/javascript/object](https://www.nodejs.red/#/javascript/object)
 
 
 > [Nodejs技术栈](https://mp.weixin.qq.com/s/e2c4NF2U6B2hVqTTfPx8DQ)
