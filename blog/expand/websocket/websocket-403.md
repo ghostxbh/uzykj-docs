@@ -105,10 +105,10 @@ location / {
 ```
 @Override
 public void registerWebSocketHandlers(WebSocketHandlerRegistry registry) {
-    registry.addHandler(socketHandler, "/socket.io/systemInfoSocketServer")
+    registry.addHandler(socketHandler, "/test")
             .addInterceptors(new SystemInfoSocketHandshakeInterceptor())
             .setAllowedOrigins("*");
-    registry.addHandler(socketHandler, "/socket.io/sockjs/systemInfoSocketServer")
+    registry.addHandler(socketHandler, "/sockjs/test")
             .addInterceptors(new SystemInfoSocketHandshakeInterceptor())
             .setAllowedOrigins("*")
             .withSockJS();
