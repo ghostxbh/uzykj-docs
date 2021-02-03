@@ -55,6 +55,7 @@ webSocket.onerror = function (event) {
 ## 分析
 - 连接失败
 - 访问拦截
+- nginx代理
 - 跨域
 
 ## 解决
@@ -75,6 +76,27 @@ public WebMvcConfigurer corsConfigurer() {
             registry.addMapping("/**").allowedOrigins("*");
         }
     };
+}
+```
+
+### nginx代理
+在nginx中配置
+`proxy_set_header Upgrade $http_upgrade` 
+`proxy_set_header Connection "upgrade"`
+`proxy_set_header Host $host`
+三个配置
+
+完整配置如下:
+```conf
+location / {
+    proxy_pass http://127.0.0.1:8080;
+    proxy_set_header Upgrade $http_upgrade;
+    proxy_set_header Connection "upgrade";
+    proxy_set_header Host $host;
+    proxy_http_version 1.1;
+    proxy_set_header Host $host;
+    proxy_set_header X-Real-IP $remote_addr;
+    proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
 }
 ```
 
