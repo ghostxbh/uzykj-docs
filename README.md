@@ -41,9 +41,9 @@
 
 ### 数据库篇
 - 关系型
-    - [MySQL](https://uzykj.com/docs/blog/database/mysql/index.html)
+    - [MySQL](https://uzykj.com/docs/blog/database/mysql/mysql_index.html)
 - 非关系型
-    - [Redis](https://uzykj.com/docs/blog/database/redis/index.html)
+    - [Redis](https://uzykj.com/docs/blog/database/redis/redis_index.html)
 
 ### Linux篇
 - 常用命令
@@ -62,7 +62,8 @@
 - [WebSocket](https://uzykj.com/docs/blog/expand/websocket/websocket-403.html)
 
 ## 博客技术栈
-- Vuepress
+- [Vuepress](https://vuepress.vuejs.org/zh/)
+- [Vssue](https://vssue.js.org/)
 - MarkDown
 
 ## MIT License
