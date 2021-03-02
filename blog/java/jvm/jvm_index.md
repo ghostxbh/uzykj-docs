@@ -1,4 +1,4 @@
-# JVM面试汇总
+# JVM汇总
 
 - 1、[ClassLoader类加载器](classloader.md)
 
@@ -50,8 +50,8 @@
 - -XX:CMSFullGCsBeforeCompaction：多少次FGC之后进行压缩
 - -XX:+CMSClassUnloadingEnabled：年老代启用CMS，但默认是不会回收永久代(Perm)的。此处对Perm区启用类回收，防止Perm区内存满。
 - -XX:CMSInitiatingPermOccupancyFraction：达到什么比例时进行Perm回收
-- GCTimeRatio：设置GC时间占用程序运行时间的百分比
 - -XX:MaxGCPauseMillis：停顿时间，是一个建议时间，GC会尝试用各种手段达到这个时间，比如减小年轻代
+- GCTimeRatio：设置GC时间占用程序运行时间的百分比
 
 ## G1常用参数
 
