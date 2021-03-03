@@ -1,0 +1,126 @@
+# 实战案例
+
+## 1、生产环境下的一次性能抖动
+
+[生产环境下的一次性能抖动](https://uzykj.com/docs/blog/database/mysql/basic.html#_17%E3%80%81%E7%94%9F%E4%BA%A7%E7%8E%AF%E5%A2%83%E4%B8%8B%E7%9A%84%E4%B8%80%E6%AC%A1%E6%80%A7%E8%83%BD%E6%8A%96%E5%8A%A8)
+
+## 2、死锁出现的案列
+
+[死锁出现的案列](https://uzykj.com/docs/blog/database/mysql/lock.html#_5、死锁出现的案列) 
+
+## 3、字符串单引号
+
+字符串类型的唯一索引字段，select的时候没有加单引号('')导致索引失效了，走了全表扫描。血淋淋的泪，很常见的低级错误。
+
+## 4、name字段utf8传表情
+
+name字段是utf8类型的，前端根据name查用户的时候发来个表情，直接数据库告警，因为表情需要utf8mb4才支持，我们字段确是utf8类型的，隐式类型转换 了，索引失效。
+
+## 5、社交app用户信息搜索
+
+背景：类似陌陌、探探等社交APP，需要按照省市、性别、年龄范围这三个字段查找用户。如下SQL：
+
+```mysql
+SELECT * FROM user_info WHERE province = xx AND city = xx AND sex = 1 AND age > xx AND age < xx;
+```
+
+很简单，我们设计个复合索引就完事了，(province, city, sex, age)
+
+但是用户可以不选择性别，只按照省市和年龄范围选，这时候咋办呢？如果sql条件里不带上sex字段的话，那么索引失效了，因为不符合最左匹配原则，那么我们可以将SQL写成如下：
+
+```mysql
+SELECT * FROM user_info WHERE province = xx AND city = xx AND sex = -1 AND age > xx AND age < xx;
+```
+
+> sex = -1 代表全部的意思，强行给他带上这个sex索引列即可。
+
+如果还支持兴趣爱好等这种固定枚举值（复选框，可选择几个进行查询）的查询方式的话，那么可以重新设计个索引：
+
+(province, city, sex, hobby, age)
+
+```mysql
+SELECT * FROM user_info WHERE province = xx AND city = xx AND sex = -1 AND hobby IN ('xx', 'xx', 'xx') AND age > xx AND age < xx;
+```
+
+**需要注意的是age索引字段放到最后，因为他是范围查询，放到前面的话会导致后面的索引失效。而其他几个字段都是等值查询，包括IN里面也是固定的几个，可以完美复合最左匹配原则。这样一来所有字段都可以用上索引了。**
+
+如果要搜索所有女性，且按照印象分从高往低排序的话，那么可以建立个辅助索引：（sex, score）
+
+```mysql
+SELECT * FROM user_info WHERE sex = 1 ORDER BY score DESC LIMIT xx,xx;
+```
+
+总结：
+
+尽量用1-2个复杂的组合索引抗下你80%的查询，然后用1-2个辅助索引抗下剩余的20%查询场景，充分利用索引，别稀里糊涂搞一大堆索引出来。
+
+## 6、上千万级别的评论系统深度分页
+
+[深分页很慢，怎么解决的呢？](https://uzykj.com/docs/blog/database/mysql/interview.html#_10、深分页很慢-怎么解决的呢)
+
+## 7、亿级用户表统计流失人数的SQL太慢
+
+背景：要找到最后登录时间小于xxx的全部用户，然后进行统计看看有多少个。
+
+SQL：
+
+```mysql
+SELECT COUNT(id) FROM user WHERE id IN (SELECT user_id  FROM user_extent_info WHERE last_login_time < xxx);
+```
+
+几十秒才出结果。太慢了。
+
+调优：
+
+经过explain分析发现先执行了子查询，然后将子查询的结果生成了一个临时表到磁盘（到磁盘，这就慢了），接着他对user表做了一个全表扫描，扫描过程就是把每一条数据都放到临时表里的数据去做全表扫描（亿级用户搞全表扫描！）。
+
+然后通过`show warnings;`命令发现他采取了semi join的方式来给我们执行的sql，而生成临时表到磁盘也是semi join搞的鬼，所以两种办法解决：
+
+- 禁用semi join：`set optimizer_switch=semijoin=off;`但是生产环境谁让你瞎搞？
+
+- 改写SQL如下：
+
+```mysql
+SELECT COUNT(id) FROM user WHERE id IN (SELECT user_id FROM user_extent_info WHERE last_login_time < xxx) OR id IN (SELECT user_id FROM user_extent_info WHERE last_login_time < -1);
+```
+
+  也就是说where后面跟个or，这个or是根本不可能成立的，这样我们在分析执行计划发现MySQL并没有再进行semi join优化了，查询速度几百毫秒解决了。
+
+## 8、大事务影响性能
+
+背景：突然告警发现业务系统的SQL很慢。
+
+原因：在一个事务里删除了千万级别的数据，产生了大事务。kill掉这个del语句线程就好了。
+
+风险 ：
+
+- 锁定太多的数据，造成大量的阻塞和锁超时， 回滚时所需要时间比
+- 较长，执行时间长，容易造成主从延迟，
+- 如果主库的事务执行了几个小时后再提交，才会写入binlog 里，从库才会读binlog 日志 才开始同步
+- innodb 是行级锁，当涉及所有记录时，就会相当于整个表锁住，
+
+如何处理大事务：
+
+- 避免一次处理太多的数据
+- 移除不必要在事务中的select 操作
+
+## 9、强制使用索引
+
+背景：生成环境，同一条sql在不同的从库执行，产生的执行计划不同，一个使用了索引，一个未使用索引。
+
+```mysql
+explain SELECT * FROM `database`.`table` FORCE INDEX(create_time) WHERE create_time >= xxx and create_time <= xxx ORDER BY create_time asc LIMIT xxx, xxx;
+```
+
+原因：分析是索引文件或者表的碎片导致，后咨询阿里DBA给分析是表的碎片问题导致产生的执行计划不正常。
+
+解决：
+
+- 方案1：执行`OPTIMIZE TABLE`修复碎片或者执行`ALTER TABLE foo ENGINE=InnoDB`，以上两种操作都会锁表，对于数据量大，且业务高峰期执行需要慎重。
+
+- 方案2：强制索引，也就是`FORCE index create_time`，强制mysql 引擎使用索引，这个强制语法在这类问题上很有效。
+
+---
+收录时间: 2021/01/05
+
+<Vssue :title="$title" />
