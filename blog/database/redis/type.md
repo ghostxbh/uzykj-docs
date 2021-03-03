@@ -1,4 +1,4 @@
-# Redis类型
+# 类型
 
 <img src="http://file.uzykj.com/48040a58-df90-9fa5-232c-4f915d4598d0.png" width=50%>
 
