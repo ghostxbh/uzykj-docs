@@ -29,6 +29,7 @@
 - Nest
 - TypeScript
 - 工具合集
+- [好文分享](https://uzykj.com/docs/blog/nodejs/collect/artcle01.html)
 - [面试合集](https://uzykj.com/docs/blog/nodejs/interview/module_mechanism.html)
 
 ### Vue篇
@@ -42,11 +43,12 @@
 ### 数据库篇
 - 关系型
     - [MySQL](https://uzykj.com/docs/blog/database/mysql/mysql_index.html)
+    - [ClickHouse](https://uzykj.com/docs/blog/database/clickhouse/basic.html)
 - 非关系型
     - [Redis](https://uzykj.com/docs/blog/database/redis/redis_index.html)
 
 ### Linux篇
-- 常用命令
+- [常用命令](https://uzykj.com/docs/blog/linux/common/command.md)
 - 常用工具
 - 生产案例
 - [华为鲲鹏](https://uzykj.com/docs/blog/linux/kunpeng/docker_build.html)
@@ -58,8 +60,9 @@
 - 面试合集
 
 ### 扩展篇
-- [gRPC](https://uzykj.com/docs/blog/expand/grpc/grpc.html)
-- [WebSocket](https://uzykj.com/docs/blog/expand/websocket/websocket-403.html)
+- [communication](https://uzykj.com/docs/blog/protocol/communication/OSI|TCP|IP.md)
+- [gRPC](https://uzykj.com/docs/blog/protocol/grpc/grpc.html)
+- [WebSocket](https://uzykj.com/docs/blog/protocol/websocket/websocket-403.html)
 
 ## 博客技术栈
 - [Vuepress](https://vuepress.vuejs.org/zh/)
