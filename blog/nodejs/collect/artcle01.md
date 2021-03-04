@@ -1,87 +1,47 @@
+# 好文分享一期
+### 1. [多图生动详解浏览器与Node环境下的Event Loop](https://mp.weixin.qq.com/s?__biz=MzUxNzk1MjQ0Ng==&mid=2247488369&idx=1&sn=31af3f0d6bd664b330b23b89f48dc37e&chksm=f99115a0cee69cb6302ed0b172dd987f03078040b9618a575de12967cfb5c94d6741fd0ea441&mpshare=1&scene=24&srcid=112555fITJShuotmK6Ezatm9&sharer_sharetime=1606268182068&sharer_shareid=84ae739fd610c12080ec5cb9ece6b184#rd)
+
+![event1](http://file.uzykj.com/eventloop.gif)
+
+美团一面中被问到了这样一个问题：听过`Event Loop`吗？
+
+本文介绍了`Event Loop`一系列生动图文讲解
+
+- JavaScript是如何工作的
+- 浏览器中的JavaScript
+- Node.js中的JavaScript
+
+### 2. [前端科普系列（1）：前端简史](https://mp.weixin.qq.com/s?__biz=MzIyNDU2NTc5Mw==&mid=2247489182&idx=1&sn=390475e516be61a78a13fceda54f2e58&chksm=e80c59d0df7bd0c69ca82bbd068f8c9c34aacb0cdc7c77fdb399233f659eb5c7340a04bd95ba)
+
+![front1](http://file.uzykj.com/4166b730-baac-1b4d-32e1-90d9ed031e64.png)
+
+本文介绍前端的定义、JavaScript 语言的发展历程、Web技术的演进历程。
+
+关键技术点：
+
+HTML、CSS、JavaScript、Ajax、ECMAScript、Web2.0、MVC、MVVM、SPA、SSR
+
+- 什么是前端
+- JavaScript 语言的历史
+- Web开发技术演进
+
+### 3. [前端科普系列（2）：Node.js 换个角度看世界](https://mp.weixin.qq.com/s/To4FsSlctVp5fktCR4giRg)
+
+![front2](http://file.uzykj.com/ec4c4fa6-9b49-cadc-af8e-e2a5e7bebdaf.png)
+
+本文为系列文章（2），主要介绍 Node.js 的前世今生、核心科技以及背后的故事。
+
+关键技术点：
+
+Node.js、V8、事件驱动编程、npm
+
+- 关于 Node.js
+- Node.js 现状
+- Node.js 核心科技
+- Node.js 背后的那些人那些事
+
+
 ---
-home: true
-heroImage: /_images/index-read.jpg
-footer: 京ICP备20004079号 | © 2018-present ghostxbh
----
-
-# 柚子云 ❤️ Blog
-
-进击全栈开发
-
-## 汇总
-![Java](http://file.uzykj.com/e30366ee-3503-3445-c5f0-9999bf7261d1.png)
-
-## 目录
-
-### Java篇
-
-- Spring
-- [SpringBoot](https://uzykj.com/docs/blog/java/springboot/boot-value.html)
-- SpringCloud
-- [并发](https://uzykj.com/docs/blog/java/concurrent/visible.html)
-- [IO](https://uzykj.com/docs/blog/java/io/io_model.html)
-- [JVM](https://uzykj.com/docs/blog/java/jvm/jvm_index.html)
-- [分布式](https://uzykj.com/docs/blog/java/distributed/CAP.html)
-- 中间件
-- 算法
-- 踩坑记录
-- [面试合集](https://uzykj.com/docs/blog/java/interview/collection.html)
-
-### Node篇
-- 基础
-- Express
-- Koa
-- [Egg](https://uzykj.com/docs/blog/nodejs/egg/egg-readme.html)
-- Nest
-- TypeScript
-- 工具合集
-- [好文分享](https://uzykj.com/docs/blog/nodejs/collect/artcle01.html)
-- [面试合集](https://uzykj.com/docs/blog/nodejs/interview/module_mechanism.html)
-
-### Vue篇
-- [基础](https://uzykj.com/docs/blog/vuejs/basic/basic-install.html)
-- 进阶
-- 插件
-- 应用场景
-- 实战案例
-- 面试合集
-
-### 数据库篇
-- 关系型
-    - [MySQL](https://uzykj.com/docs/blog/database/mysql/mysql_index.html)
-    - [ClickHouse](https://uzykj.com/docs/blog/database/clickhouse/basic.html)
-- 非关系型
-    - [Redis](https://uzykj.com/docs/blog/database/redis/redis_index.html)
-
-### Linux篇
-- [常用命令](https://uzykj.com/docs/blog/linux/common/command.md)
-- 常用工具
-- 生产案例
-- [华为鲲鹏](https://uzykj.com/docs/blog/linux/kunpeng/docker_build.html)
-- 面试合集
-
-### 容器篇
-- [Docker](https://uzykj.com/docs/blog/container/docker/install.html)
-- K8s
-- 面试合集
-
-### 协议篇
-- [communication](https://uzykj.com/docs/blog/protocol/communication/OSI|TCP|IP.html)
-- [gRPC](https://uzykj.com/docs/blog/protocol/grpc/grpc.html)
-- [WebSocket](https://uzykj.com/docs/blog/protocol/websocket/websocket-403.html)
-
-
-## Demo篇
-- [Practice](https://github.com/ghostxbh/Practice)
-- [Algorithm](https://github.com/ghostxbh/Algorithm)
-- [egg-mongodb-demo](https://github.com/ghostxbh/egg-mongodb-demo)
-- [spring-boot-example](https://github.com/ghostxbh/spring-boot-example)
-
-## 博客技术栈
-- [Vuepress](https://vuepress.vuejs.org/zh/)
-- [Vssue](https://vssue.js.org/)
-- MarkDown
-
-## MIT License
+收录时间: 2021/02/10
 
 <Vssue :title="$title" />

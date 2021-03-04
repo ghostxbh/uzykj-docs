@@ -1,3 +1,9 @@
+---
+home: true
+heroImage: /_images/index-read.jpg
+footer: 京ICP备20004079号 | © 2018-present ghostxbh
+---
+
 # 柚子云 ❤️ Blog
 
 进击全栈开发
@@ -77,27 +83,5 @@
 - MarkDown
 
 ## MIT License
-
----
-
-home: true
-
-heroImage: /_images/index-read.jpg
-
-features:
-- title: 最近更新
-
-  details: 
-        - [Demo篇](https://github.com/ghostxbh/uzykj-docs#Demo篇)
-        - [ClickHouse](https://uzykj.com/docs/blog/database/clickhouse/basic.html)
-- title: 推荐文章
-
-  details: 
-        - [好文分享](https://uzykj.com/docs/blog/nodejs/collect/artcle01.html)
-        - [JVM合集](https://uzykj.com/docs/blog/java/jvm/jvm_index.html)
-
-footer: 京ICP备20004079号 | © 2018-present ghostxbh
-
----
 
 <Vssue :title="$title" />
