@@ -59,10 +59,17 @@
 - K8s
 - 面试合集
 
-### 扩展篇
-- [communication](https://uzykj.com/docs/blog/protocol/communication/OSI|TCP|IP.md)
+### 协议篇
+- [communication](https://uzykj.com/docs/blog/protocol/communication/OSI|TCP|IP.html)
 - [gRPC](https://uzykj.com/docs/blog/protocol/grpc/grpc.html)
 - [WebSocket](https://uzykj.com/docs/blog/protocol/websocket/websocket-403.html)
+
+
+## Demo篇
+- [Practice](https://github.com/ghostxbh/Practice)
+- [Algorithm](https://github.com/ghostxbh/Algorithm)
+- [egg-mongodb-demo](https://github.com/ghostxbh/egg-mongodb-demo)
+- [spring-boot-example](https://github.com/ghostxbh/spring-boot-example)
 
 ## 博客技术栈
 - [Vuepress](https://vuepress.vuejs.org/zh/)
