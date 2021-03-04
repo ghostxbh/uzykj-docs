@@ -223,6 +223,9 @@ CAP需要在互联和数据共享的前提下讨论
 
 > [Mr.s Luo](#)
 
+## 资料
+- [分布式一致性在58招聘的实践](https://mp.weixin.qq.com/s/LuHMeD9Y5QLXUfaut5Lmkg)
+
 
 ---
 收录时间: 2021/02/20
