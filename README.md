@@ -14,7 +14,7 @@
 - SpringCloud
 - [并发](https://uzykj.com/docs/blog/java/concurrent/visible.html)
 - [IO](https://uzykj.com/docs/blog/java/io/io_model.html)
-- [JVM](https://uzykj.com/docs/blog/java/jvm/index.html)
+- [JVM](https://uzykj.com/docs/blog/java/jvm/jvm_index.html)
 - [分布式](https://uzykj.com/docs/blog/java/distributed/CAP.html)
 - 中间件
 - 算法
@@ -78,3 +78,26 @@
 
 ## MIT License
 
+---
+
+home: true
+
+heroImage: /_images/index-read.jpg
+
+features:
+- title: 最近更新
+
+  details: 
+        - [Demo篇](https://github.com/ghostxbh/uzykj-docs#Demo篇)
+        - [ClickHouse](https://uzykj.com/docs/blog/database/clickhouse/basic.html)
+- title: 推荐文章
+
+  details: 
+        - [好文分享](https://uzykj.com/docs/blog/nodejs/collect/artcle01.html)
+        - [JVM合集](https://uzykj.com/docs/blog/java/jvm/jvm_index.html)
+
+footer: 京ICP备20004079号 | © 2018-present ghostxbh
+
+---
+
+<Vssue :title="$title" />
