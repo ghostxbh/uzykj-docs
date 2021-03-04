@@ -141,3 +141,8 @@ SDP可以包括会话级和媒体级属性。 如果相同的属性同时出现�
     m = video 51372 RTP/AVP 31
     m = application 32416udp wb
     a = orient:portrait
+
+---
+收录时间: 2019/08/10
+
+<Vssue :title="$title" />
