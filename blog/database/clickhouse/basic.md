@@ -1,0 +1,282 @@
+# ClickHouse
+[ClickHouse](https://clickhouse.tech)是一个列式存储的分布式OLAP数据库管理系统，其全称是Click Stream, Data Warehouse。
+
+ClickHouse由[Yandex](https://baike.baidu.com/item/Yandex)（俄罗斯的互联网巨头，类似于Google,百度）开发，并于2016年[开源](https://github.com/ClickHouse/ClickHouse)的。被众多厂商应用于海量数据的实时分析。
+
+**文档地址**: https://clickhouse.tech/docs/en, 这是在学习和使用ClickHouse过程中常用且重要的一个资源，很多问题都可以在这里得到解答。在网页的右上角有一个可以搜索的地方，能够实时展示搜索结果，用起来也是十分方便的。文档提供了中英文版本，有时中文版本可能是机器翻译的没那么准确，或者没有及时更新，这时侯就要以英文文档为准了。
+
+注：
+- OLAP: Online Analytical Processing(联机数据分析)
+- 本文使用的clickhouse版本: 20.11.4.13 
+
+## 特点
+
+- 列式存储，宽表查询依然可以非常快速
+- 丰富的SQL方言(dialect) ([函数][sql-functions], [操作符][sql-operators])使用起来非常顺滑
+- 容错性高 
+- 扩展性强
+- 兼具了数据的高效存储和查询
+
+
+## 为什么快
+
+- 数据采用列存储，从宽表中读取部分列时，只需要按需读取对应的列数据，不必读取整行数据，从而在IO消耗上就有明显的减少
+- 相同的列被集中存放，可以针对不同类型的数据采用不同的压缩算法，压缩效率会更高效，读取相比为压缩前的IO也可以被进一步降低
+- 高压缩比也意味着可以在内存中缓存更多的数据
+- 指定排序字段后，数据将被有序存储，可减少命中的数据块，降低读取的IO
+- 一级主键索引常驻内存辅以二级跳数索引，可以快速定位数据，加速查询
+- 数据具有分布式，多节点，多分区的特点，clickhouse可以充分利用系统资源，多核多机并行查询和计算
+- 矢量化查询执行(vertorized query execution)搭配cpu的SIMD，减少函数调用次数，以及有限的运行时动态代码生成, 都极大地加速了查询的处理
+- 提供多种近似计算，以损失一定精度为代价，提升海量数据的查询性能
+
+注： [SIMD][SIMD]: Single Instruction, Multiple Data, 安装ClickHouse的一个要求就是CPU支持[SSE(Streaming SIMD Extensions)][SSE]
+
+
+## 系统要求
+
+- CPU: x86_64架构,支持`SSE 4.2` (否则需要从源码另行编译)。
+    - 核心数多+较低的时钟频率(Clock Rate) 优于 核心数少+较高的时钟频率
+    - 建议使用`Turbo Boost`, `hyper-threading`
+- RAM: >= 4GB
+- 禁用Swap
+- Storage：2GB（安装）+ 数据存储 (平均数据大小 * 数据量 * 压缩系数 * 副本数)
+- Network: 推荐10G以太网
+
+[Requirements](https://clickhouse.tech/docs/en/operations/requirements/)
+
+```sh
+# 查看系统是否支持SSE 4.2
+grep -q sse4_2 /proc/cpuinfo && echo "SSE 4.2 supported" || echo "SSE 4.2 not supported"
+```
+
+ClickHouse并行处理数据，会尽可能多的使用系统资源，
+
+查询是占用内存的主要操作，影响因素包括查询复杂度和处理数据量。程序运行和一般的查询使用很少的内存即可。
+
+使用推荐：
+- 将cpu设置为`performance`模式
+- 不要禁用cpu的overcommit
+- 禁用THP(Transparent Huge Page, 透明大页)
+- 存储使用SSD或者HDD (>=7200 RPM)
+- 使用EXT4文件系统，挂载选项设置`noatime`,`nobarrier`
+
+
+```sh
+# 设置cpu scaling governor:
+echo 'performance' | sudo tee /sys/devices/system/cpu/cpu*/cpufreq/scaling_governor
+# 设置overcommit
+echo 0 | sudo tee /proc/sys/vm/overcommit_memory
+# 禁用THP,madvise表示只在`MADV_HUGEPAGE`标志的`VMA`中使用透明大页
+echo 'madvise' | sudo tee /sys/kernel/mm/transparent_hugepage/enabled
+# 查看是否禁用了THP
+grep -i HugePages_Total /proc/meminfo
+cat /proc/sys/vm/nr_hugepages
+```
+
+
+```sh
+$ cat /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor 
+powersave
+```
+
+[Tips](https://clickhouse.tech/docs/en/operations/tips/)
+
+## 安装
+
+ClickHouse的[安装][installation]方式概括起来有以下几种:
+- DEB/RPM
+- 预编译好的压缩包或二进制包
+- Docker
+
+安装完成后，会生成`init`脚本和适用于`systemd`的service文件，可以方便地将clickhouse-server作为一个守护进程来管理。
+
+获取最新的稳定版版本号:
+```
+curl -s https://repo.clickhouse.tech/tgz/stable/ | grep -Eo '[0-9]+\.[0-9]+\.[0-9]+\.[0-9]+' | sort -V -r | head -n 1
+```
+
+下面演示一下使用docker的方式。
+
+镜像地址: [clickhouse-server](https://hub.docker.com/r/yandex/clickhouse-server/)
+
+```sh
+docker pull yandex/clickhouse-server:20.11.4.13
+docker pull yandex/clickhouse-client:20.11.4.13
+# 启动服务端
+docker run -d --name my-clickhouse-server --ulimit=nofile=262144:262144 clickhouse yandex/clickhouse-server:20.11.4.13
+
+# 添加客户端别名，方便后面使用
+alias clickhouse-client="docker run -it --rm --link my-clickhouse-server:clickhouse-server yandex/clickhouse-client:20.11.4.13 --host clickhouse-server"
+
+# 运行客户端
+clickhouse-client --multiline
+```
+
+clickhouse-server的一些重要目录和文件:
+- 数据存储路径: `/var/lib/clickhouse/`
+- 配置文件: `/etc/clickhouse-server/`
+- 日志文件: `/var/log/clickhouse-server/` 
+
+```sh
+root@ec7f3d135b72:/# tree /etc/clickhouse-server/
+/etc/clickhouse-server/
+├── config.d
+│   └── docker_related_config.xml
+├── config.xml
+├── users.d
+└── users.xml
+
+2 directories, 3 files
+root@ec7f3d135b72:/# tree -d -L 1 /var/lib/clickhouse/
+/var/lib/clickhouse/
+├── access
+├── data
+├── dictionaries_lib
+├── flags
+├── format_schemas
+├── metadata
+├── metadata_dropped
+├── preprocessed_configs
+├── store
+├── tmp
+└── user_files
+root@ec7f3d135b72:/# tree /var/log/clickhouse-server/
+/var/log/clickhouse-server/
+├── clickhouse-server.err.log
+└── clickhouse-server.log
+
+0 directories, 2 files
+```
+
+监听端口:
+- 8123: HTTP请求端口，主要用于RestAPI和jdbc等数据驱动
+- 9000: TCP，用于CLI客户端和集群内部通信
+
+可视化工具: DBeaver等
+
+
+## 创建数据库表
+
+ClickHouse使用的是[SQL语法](https://clickhouse.tech/docs/en/sql-reference/)。
+
+创建库表使用的是[CREATE](https://clickhouse.tech/docs/en/sql-reference/statements/create/)语句。
+
+创建数据库:
+
+```sql
+CREATE DATABASE [IF NOT EXISTS] <db_name> [ON CLUSTER <cluster>] [ENGINE = <engine>]
+```
+
+注: 方括号`[]`中的内容表示可选，尖括号`<>`的内容则需要替换为实际的值。
+
+创建一个数据库会在数据目录下创建一个`<db_name>`对应的目录，在metadata下也会创建一个用于数据恢复的`<db_name>.sql`文件。
+
+
+创建一个数据表:
+
+```sql
+CREATE TABLE [IF NOT EXISTS] [<db_name>.]<table_name> [ON CLUSTER <cluster>] (
+	`<field>` <type> [DEFAULT|MATERIALIZED|ALIAS <expr>]
+) ENGINE = <engine>;
+```
+
+在没有提供`<d_name>`的情况下，默认会使用当前所在的数据库。
+
+### 数据类型
+
+定义数据表时，需要为字段指定类型。需要判断一个字段的类型可以使用这么一条查询语句`SELECT toTypeName(<field>);`
+
+ClickHouse支持众多的[数据类型][data-types]. 
+- 数字类型
+    + 整数:
+        - 有符号定长整数:
+            + Int8: [-128, 127], 别名`TINYINT`,`BOOL`, `BOOLEAN`, `INT1`
+            + Int16: [-32768, 32767], 别名`SMALLINT`, `INT2`
+            + Int32: [-2^31,  2^31 -1], 别名`INT`, `INT4`, `INTEGER`
+            + Int64: 别名`BIGINT`
+            + Int128
+            + Int256
+        - 无符号定长整数: UInt8, UInt16, UInt32, UInt64, UInt256
+    + 浮点数:
+        - Float32: 别名`FLOAT`
+        - Float64: 别名`DOUBLE`
+    + Inf: 无穷大,可以执行除零的操作，例如`SELECT 1 / 0;`
+    + NaN: 不是一个数字, 例如`SELECT 0 / 0;`
+    + Decimial(p, s): 提供更准确的精度控制
+- 字符串:
+    + String：支持任意长度的字符串
+    + FixedString(N): 定长字符串（N字节），处理具有相对固定长度的字符串处理起来会更高效。
+    + UUID
+- 日期时间:
+    + Date: 保存的是自1970-01-01以来的天数(2字节)
+    + DateTime: 保存的是Unix时间戳，默认的显示格式`YYYY-MM-DD hh:mm:ss`
+    + DateTime64: 可精确到纳秒
+- 枚举: Enum8, Enum16
+- 非空: Nullable(T), 可空字段不能用于索引，某些情况下会影响性能
+- lowCardinality(data_type): 可以将String, FixedString, Date, DateTime, 以及除Decimal之外的数字转换为字典编码。转换后的字典值个数在10,000以内十分高效，在需要使用到Enum的时候，也可以考虑替换为lowCardinality.
+- 数组类型: Array(T), T可为任意类型，甚至还可以是一个别的数组
+- 元组: tuple(T1, T2, ...), 同时存放多种类型的数据
+- Domain:
+    + IPV4: UInt32
+    + IPV6: FixedString(16)
+- 嵌套文档: Nested(name1 type1, name2 type2, ...)
+- 聚合函数:
+    + SimpleAggregateFunction(func, types)
+    + AggregateFunction(func, types...)
+
+## 数据库引擎
+
+在创建数据库的时候，需要指定数据库引擎。大多时候没有指定，那么使用的就是默认的库引擎:
+- Ordinary: 默认引擎，可以使用任意类型的表引擎
+- Dictionary: 字典引擎，自动为所有数据字典创建相应的数据表
+- Memory: 内存引擎，存放临时数据，服务重启后被清除
+- Lazy: 日志引擎，只支持Log系列的表引擎,保存时长为`expiration_time_in_seconds`
+- MySQL: 与远程MySQL建立连接，可执行SELECT和INSERT操作 
+- MaterializeMySQL: 尚处于试验阶段, 自动拉取远端MySQL的数据，并为它们创建MySQL表引擎的数据表
+
+
+## 数据表引擎
+
+[表引擎][table-engines]决定了数据表的特性，以及数据如何被存储和读取。
+
+- MergeTree家族: 最常用的数据表引擎，数据写入快，支持副本、分区等众多特性
+    + MergeTree
+    + ReplacingMergeTree
+    + SummingMergeTree
+    + AggregatingMergeTree
+    + CollapsingMergeTree
+    + VersionedCollapsingMergeTree
+    + GraphiteMergeTree
+- 日志:
+    + Log
+    + TinyLog
+    + StripeLog
+- 集成引擎:
+    + Kafka: 接入kafka，发布或订阅数据，自动处理数据流
+    + RabbitMQ
+    + MySQL
+    + HDFS(URI, format)
+    + S3
+    + JDBC(dbms_uri, external_db, external_table)
+    + ODBC
+- 其他:
+    + Distributed: 分布式表引擎，不存储数据，允许在集群节点上并行查询。
+    + View: 视图
+    + MaterializedView: 物化视图
+    + Dictionary: 存放字典
+    + Memory: 内存
+    + File
+    + URL
+    + Merge`(<db>, <table_regex>)`: 本身不存储数据，但是允许同时从多个表读取数据
+    + Null: 一个Null表，相当于Linux上`/dev/null`的作用
+
+## 资料
+- [官方网站](https://clickhouse.tech/)
+- [研发公司官网](https://baike.baidu.com/item/Yandex)
+- [installation](https://clickhouse.tech/docs/en/getting-started/install)
+- [data-types](https://clickhouse.tech/docs/en/sql-reference/data-types/)
+- [table-engines](https://clickhouse.tech/docs/en/engines/table-engines/)
+- [sql-functions](https://clickhouse.tech/docs/en/sql-reference/functions/)
+- [sql-operators](https://clickhouse.tech/docs/en/sql-reference/operators/)
+- [SIMD](https://en.wikipedia.org/wiki/SIMD)
+- [SSE](https://en.wikipedia.org/wiki/Streaming_SIMD_Extensions)
