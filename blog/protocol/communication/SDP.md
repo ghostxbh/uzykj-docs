@@ -1,0 +1,143 @@
+# SDP
+SDP全称是**Session Description Protocol**，翻译过来就是描述会话的协议。主要用于两个会话实体之间的媒体协商。
+
+SDP代表会话描述协议。它用于描述参与者通过网络理解的格式的多媒体会话。根据该描述，一方决定是否加入会议或者何时或如何加入会议。
+
+会议的所有者通过发送包含会话描述的多播消息在网络上广告它。所有者的名称，会话的名称，编码，时间等。根据这些信息，广告的接收者做出关于参与会话的决定。
+
+SDP通常包含在通常称为SIP的会话发起协议的主体部分中。
+
+SDP在RFC 2327中定义。SDP消息由一系列称为字段的行组成，其名称由单个小写字母缩写，并且以所需顺序来简化解析。
+
+## SDP的目的
+SDP的目的是在多媒体会话中传达关于媒体流的信息，以帮助参与者加入或收集特定会话的信息。
+
+SDP是一个短结构化文本描述。
+
+它传达会话的名称和目的，媒体，协议，编解码格式，定时和传输信息。
+
+临时参与者检查这些信息并决定是否加入会话，以及如果它决定如何以及何时加入会话。
+
+格式具有< type>形式的条目。 =< value>，其中< type> 定义唯一会话参数，并且< value> 提供该参数的特定值。
+
+## SDP消息的一般形式
+x = parameter1参数2 ...参数N
+
+行以单个小写字母开头，例如x。字母和=之间从不存在任何空格，每个参数之间只有一个空格。每个字段都有一定数量的参数。
+
+会话描述参数
+
+    0、会话描述(*表示可选)
+    v = (protocol version)
+    o = (owner/creator and session identifier)
+    s = (session name)
+    i =* (session information)
+    u =* (URI of description)
+    e =* (email address)
+    p =* (phone number)
+    c =* (connection information - not required if included in all media)
+    b =* (bandwidth information)
+    z =* (time zone adjustments)
+    k =* (encryption key)
+    a =* (zero or more session attribute lines)
+
+- 1、协议版本
+
+v =字段包含SDP版本号。因为SDP的当前版本是0，所以有效的SDP消息将始终以v = 0开始。
+
+- 2、所有者/创建者和会话标识符 **
+
+o =字段包含有关会话发起者和会话标识符的信息。此字段用于唯一标识会话。
+该字段包含 -
+o =< username>< session-id>< version>< network-type>< address-type>
+用户名参数包含发起方的登录名或主机。
+session-id 参数是用于确保唯一性的网络时间协议(NTP)时间戳或随机数。
+版本是一个数字字段，对于会话的每个更改都会增加，也建议为NTP时间戳。
+对于Internet，网络类型始终为IN。address-type参数为IPv4或IPv6地址的IP4或IP6(点分十进制形式或完全限定的主机名)。
+
+- 3、会话名称
+
+s =字段包含会话的名称。 它可以包含任何非零数字的字符。可选的i =字段包含有关会话的信息。它可以包含任意数量的字符。
+
+- 4、URI
+
+可选的u =字段包含具有关于会话的更多信息的统一资源指示符(URI)
+
+- 5、电子邮件地址
+
+可选的e =字段包含会话主机的电子邮件地址。可选的p =字段包含电话号码。
+
+- 6、连接信息 ***
+
+c =字段包含有关介质连接的信息。
+
+    该字段包含 -
+    c =< network-type>< address-type>< connection-address>
+    对于Internet， network-type 参数定义为IN。
+    地址类型定义为IPv4地址的IP4和IPv6地址的IP6。
+    connection-address 是将发送媒体数据包的IP地址或主机，可以是多播或单播。
+    如果组播，则connection-address字段包含 -
+    connection-address = base-multicast-address / ttl / number-of-addresses
+    其中 ttl 是生存时间值，并且地址数量指示从基本多播地址开始包括多少个连续的多播地址。
+
+- 7、带宽信息
+
+可选b =字段包含有关所需带宽的信息。 它的形式 -
+
+    b = modifier:bandwidth - value
+
+- 8、时间，重复次数和时区
+
+t =字段包含会话的开始时间和停止时间。
+
+t =开始时间停止时间
+
+可选的r =字段包含有关可以在NTP或天( d 小>)，小时( h 小>)或分钟( > m )。
+
+可选的 z =字段包含有关时区偏移的信息。如果发生的会话跨越从夏令时到标准时间的更改，则使用此字段，反之亦然。
+
+- 9、媒体公告
+
+可选的 m =字段包含有关媒体会话类型的信息。 该字段包含 -
+
+    m =媒体端口传输格式列表
+    媒体参数是音频，视频，文本，应用程序，消息，图像或控件。port参数包含端口号。
+    传输参数包含使用的传输协议或RTP配置文件。
+    格式列表包含有关介质的更多信息。通常，它包含在RTP音频视频简档中定义的媒体有效载荷类型。
+    Example:
+        m = audio 49430 RTP/AVP 0 6 8 99
+    这三个编解码器之一可以用于音频媒体会话。如果意图是建立三个音频通道，则将使用三个单独的媒体字段。
+
+- 10、属性
+
+可选的a =字段包含前面的媒体会话的属性。 此字段可用于扩展SDP以提供有关介质的更多信息。 
+如果SDP用户没有完全理解，则可以忽略属性字段。 媒体字段中列出的每个媒体有效内容类型可以有一个或多个属性字段。
+
+SDP中的属性可以是
+
+    session level, or
+    media level.
+
+会话级别意味着该属性在SDP中的第一个媒体行之前列出。 如果是这种情况，该属性将应用于其下的所有媒体行。
+
+媒体级别表示它在媒体行之后列出。 在这种情况下，属性仅适用于该特定媒体流。
+
+SDP可以包括会话级和媒体级属性。 如果相同的属性同时出现，则媒体级属性将覆盖该特定媒体流的会话级属性。 请注意，连接数据字段也可以是会话级或媒体级。
+
+- 11、SDP示例
+
+下面给出一个示例会话描述，取自RFC 2327 -
+
+    v = 0
+    o = mhandley2890844526 2890842807 IN IP4 126.16.64.4
+    s = SDP Seminar
+    i = A Seminar on the session description protocol
+    u = http://www.cs.ucl.ac.uk/staff/M.Handley/sdp.03.ps
+    e = mjh@isi.edu(Mark Handley)
+    c = IN IP4 224.2.17.12/127
+    t = 2873397496 2873404696
+    a = recvonly
+    m = audio 49170 RTP/AVP 0
+    m = video 51372 RTP/AVP 31
+    m = application 32416udp wb
+    a = orient:portrait
