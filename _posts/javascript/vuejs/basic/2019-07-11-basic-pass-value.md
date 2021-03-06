@@ -1,3 +1,12 @@
+---
+title: Vue.js父子组件传值
+date: 2019-07-11
+tags:
+    - Vue.js
+author: ghostxbh
+location: BeiJing
+summary: 父组件调用子组件时，绑定动态属性。
+---
 # 父子组件传值
 
 ## 技术点：
@@ -19,6 +28,6 @@ props: ['msg', 'title', 'run', 'home']
 ```
 
 ---
-收录时间: 2019/07/11
+收录时间: 2019-07-11
 
 <Vssue :title="$title" />

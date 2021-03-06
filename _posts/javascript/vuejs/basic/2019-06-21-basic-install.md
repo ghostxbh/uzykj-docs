@@ -1,3 +1,13 @@
+---
+title: Vue.js开发环境
+date: 2019-06-21
+tags:
+    - Vue.js
+    - Vue-CLI
+author: ghostxbh
+location: BeiJing
+summary: 搭建Vue.js的开发环境，及使用Vue-CLI脚手架命令。
+---
 # 开发环境
 
 - 官方推荐命令，Vue 不支持 IE8 及以下版本，因为 Vue 使用了 IE8 无法模拟的 ECMAScript 5 特性。
@@ -96,7 +106,7 @@ npm install -g cnpm --registry=https://registry.npm.taobao.org
 [vuejs安装](https://cn.vuejs.org/v2/guide/installation.html)
 
 ---
-收录时间: 2019/06/21
+收录时间: 2019-06-21
 
 <Vssue :title="$title" />
 

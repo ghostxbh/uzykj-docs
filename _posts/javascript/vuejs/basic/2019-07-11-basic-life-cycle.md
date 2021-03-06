@@ -1,3 +1,12 @@
+---
+title: Vue.js生命周期
+date: 2019-07-11
+tags:
+    - Vue.js
+author: ghostxbh
+location: BeiJing
+summary: Vue.js的生命周期。
+---
 # 生命周期
 
 如下图
@@ -40,6 +49,6 @@ destroyed() {
 
 
 ---
-收录时间: 2019/07/11
+收录时间: 2019-07-11
 
 <Vssue :title="$title" />

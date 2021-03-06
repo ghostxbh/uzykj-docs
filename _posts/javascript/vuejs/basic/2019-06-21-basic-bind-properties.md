@@ -1,3 +1,12 @@
+---
+title: Vue.js属性绑定
+date: 2019-06-21
+tags:
+    - Vue.js
+author: ghostxbh
+location: BeiJing
+summary: 操作元素的`class`列表和内联样式是数据绑定的一个常见需求。
+---
 # 属性绑定
 
 ## Class 与 Style 属性绑定
@@ -101,6 +110,6 @@
 [属性绑定](https://cn.vuejs.org/v2/guide/class-and-style.html)
 
 ---
-收录时间: 2019/06/21
+收录时间: 2019-06-21
 
 <Vssue :title="$title" />

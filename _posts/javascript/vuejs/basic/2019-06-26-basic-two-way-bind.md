@@ -1,3 +1,12 @@
+---
+title: Vue.js双向数据绑定
+date: 2019-06-26
+tags:
+    - Vue.js
+author: ghostxbh
+location: BeiJing
+summary: 双向数据绑定基于**MVVM**框架，vue属于MVVM框架。
+---
 # 双向数据绑定
 
 双向数据绑定基于**MVVM**框架，vue属于MVVM框架
@@ -66,6 +75,6 @@ methods: {
 ```
 
 ---
-收录时间: 2019/06/26
+收录时间: 2019-06-26
 
 <Vssue :title="$title" />

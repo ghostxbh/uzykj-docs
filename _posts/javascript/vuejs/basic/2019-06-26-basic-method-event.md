@@ -1,3 +1,12 @@
+---
+title: Vue.js定义方法、对象事件
+date: 2019-06-26
+tags:
+    - Vue.js
+author: ghostxbh
+location: BeiJing
+summary: 可以用 `v-on` 指令监听 `DOM` 事件，并在触发时运行一些 `JavaScript` 代码。
+---
 # 定义方法、对象事件
 ### 监听事件
 可以用 `v-on` 指令监听 `DOM` 事件，并在触发时运行一些 `JavaScript` 代码。
@@ -326,6 +335,6 @@ Vue.config.keyCodes.f1 = 112
 [vue事件](https://github.com/ghostxbh/VUE-Study/tree/master/vuedemo/demo05)
 
 ---
-收录时间: 2019/06/26
+收录时间: 2019-06-26
 
 <Vssue :title="$title" />

@@ -1,3 +1,12 @@
+---
+title: Vue.js组件
+date: 2019-07-01
+tags:
+    - Vue.js
+author: ghostxbh
+location: BeiJing
+summary: 可以把公共的页面，如页面头部、底部抽离出来，提供给其他页面重复使用。
+---
 # Vue组件
 
 vue组件类似nodejs组件
@@ -143,6 +152,6 @@ template模版中切记使用一个根节点包裹html代码
 [vue组件](https://github.com/ghostxbh/VUE-Study/tree/master/vuedemo/demo07)
 
 ---
-收录时间: 2019/07/01
+收录时间: 2019-07-01
 
 <Vssue :title="$title" />

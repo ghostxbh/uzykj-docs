@@ -1,3 +1,14 @@
+---
+title: Vue.js数据请求
+date: 2019-07-11
+tags:
+    - Vue.js
+    - axios
+    - jsonp
+author: ghostxbh
+location: BeiJing
+summary: Vue.js数据请求的几种方式。
+---
 # 数据请求
 
 ## 技术点：
@@ -82,6 +93,6 @@ FetchJsonp(api)
 [vue数据请求](https://github.com/ghostxbh/VUE-Study/tree/master/vuedemo/demo09)
 
 ---
-收录时间: 2019/07/11
+收录时间: 2019-07-11
 
 <Vssue :title="$title" />
