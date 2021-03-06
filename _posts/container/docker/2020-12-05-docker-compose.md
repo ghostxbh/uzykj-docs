@@ -1,3 +1,12 @@
+---
+title: 安装docker-compose
+date: 2020-12-05
+tags:
+    - docker-compose
+author: ghostxbh
+location: BeiJing
+summary: 安装docker-compose
+---
 # 安装docker-compose
 
 ## 安装
@@ -18,6 +27,6 @@ docker-compose --version
 ```
 
 ---
-收录时间: 2020/12/05
+收录时间: 2020-12-05
 
 <Vssue :title="$title" />
