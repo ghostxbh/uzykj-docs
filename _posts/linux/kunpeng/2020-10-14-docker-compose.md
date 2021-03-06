@@ -1,3 +1,14 @@
+---
+title: 安装docker-compose
+date: 2020-10-14
+tags:
+    - docker
+    - docker-compose
+    - 鲲鹏
+author: ghostxbh
+location: BeiJing
+summary: 根据docker官网安装docker-compose即可(docker支持ARM)。
+---
 # 安装docker-compose
 
 ### 安装docker
@@ -22,6 +33,6 @@ pip3 uninstall docker-compose
 ```
 
 ---
-收录时间: 2020/10/14
+收录时间: 2020-10-14
 
 <Vssue :title="$title" />

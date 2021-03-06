@@ -1,3 +1,13 @@
+---
+title: 使用docker构建多平台镜像
+date: 2020-11-03
+tags:
+    - docker
+    - 鲲鹏
+author: ghostxbh
+location: BeiJing
+summary: 由于鲲鹏的处理器是arm的，很多开源软件如redis最新版本都没有arm的镜像，所以在鲲鹏上运行这些开源软件会有问题。
+---
 # 使用docker构建多平台镜像
 ## 前言
 最近在玩鲲鹏，由于鲲鹏的处理器是arm的，很多开源软件如redis最新版本都没有arm的镜像，所以在鲲鹏上运行这些开源软件会有问题
@@ -117,6 +127,6 @@ docker buildx build -t daxion/buildx:opensips --platform=linux/arm,linux/arm64,l
 <img src="http://file.uzykj.com/439193d3-7007-af8f-5770-63afb6271e55.png" heigth=50% widt=50%>
 
 ---
-收录时间: 2020/11/03
+收录时间: 2020-11-03
 
 <Vssue :title="$title" />

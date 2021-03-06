@@ -1,3 +1,14 @@
+---
+title: 华为鲲鹏上安装rtpengine
+date: 2020-11-23
+tags:
+    - CentOS
+    - rtpengine
+    - 鲲鹏
+author: ghostxbh
+location: BeiJing
+summary: 华为上安装rtpengine，遇到的问题主要有2点：安装rtpengine很多的依赖不支持arm，需要源代码编译；rtpengine使用内核态运行不了，改为用户态运行
+---
 # 华为鲲鹏上安装rtpengine
 ## 前言
 华为上安装rtpengine，遇到的问题主要有2点
@@ -111,6 +122,6 @@ cp libxt_RTPENGINE.so  /usr/lib64/xtables/
 ```
 
 ---
-收录时间: 2020/11/23
+收录时间: 2020-11-23
 
 <Vssue :title="$title" />
