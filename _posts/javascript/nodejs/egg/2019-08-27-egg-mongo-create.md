@@ -1,3 +1,14 @@
+---
+title: MongoDB 插入文档
+date: 2019-08-27
+tags:
+    - Egg.js
+    - MongoDB
+    - Mongoose
+author: ghostxbh
+location: BeiJing
+summary: 使用Egg进行MongoDB创建文档。
+---
 ## MongoDB 插入文档
 
 文档的数据结构和JSON基本一样。
@@ -43,6 +54,6 @@ async create(user) {
 
 
 ---
-收录时间: 2019/08/27
+收录时间: 2019-08-27
 
 <Vssue :title="$title" />

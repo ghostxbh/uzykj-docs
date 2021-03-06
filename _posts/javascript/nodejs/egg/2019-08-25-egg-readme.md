@@ -1,3 +1,12 @@
+---
+title: Egg 示例
+date: 2019-08-25
+tags:
+    - Egg.js
+author: ghostxbh
+location: BeiJing
+summary: Egg 示例。
+---
 # Egg 示例
 
 [![star](https://badgen.net/github/stars/ghostxbh/egg-mongodb-demo?icon=github&color=4ab8a1)](https://github.com/ghostxbh/egg-mongodb-demo/stargazers)
@@ -42,17 +51,17 @@ $ npm stop
 
 基于`egg-mongoose`组件操作**mongodb**
 + 连接
-    + [连接](egg-mongo-connection.md)
+    + [连接](files/blogs/blog/javascript/nodejs/egg/egg-mongo-connection.md)
 + 创建 | 删除 数据集
-    + [创建数据集](egg-mongo-createdb.md)
-    + [删除数据集](egg-mongo-dropdb.md)
+    + [创建数据集](files/blogs/blog/javascript/nodejs/egg/egg-mongo-createdb.md)
+    + [删除数据集](files/blogs/blog/javascript/nodejs/egg/egg-mongo-dropdb.md)
 + 增删改查
-    + [增加](egg-mongo-create.md)
-    + [删除](egg-mongo-delete.md)
-    + [修改](egg-mongo-update.md)
-    + [查找](egg-mongo-find.md)
+    + [增加](files/blogs/blog/javascript/nodejs/egg/egg-mongo-create.md)
+    + [删除](files/blogs/blog/javascript/nodejs/egg/egg-mongo-delete.md)
+    + [修改](files/blogs/blog/javascript/nodejs/egg/egg-mongo-update.md)
+    + [查找](files/blogs/blog/javascript/nodejs/egg/egg-mongo-find.md)
 
 ---
-收录时间: 2019/08/25
+收录时间: 2019-08-25
 
 <Vssue :title="$title" />

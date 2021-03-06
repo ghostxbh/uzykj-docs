@@ -1,3 +1,14 @@
+---
+title: MongoDB 删除文档
+date: 2019-08-30
+tags:
+    - Egg.js
+    - MongoDB
+    - Mongoose
+author: ghostxbh
+location: BeiJing
+summary: 使用Egg进行MongoDB 删除文档。
+---
 ## MongoDB 删除文档
 MongoDB `remove()`函数是用来移除集合中的数据。
 
@@ -50,6 +61,6 @@ async delete(id) {
 
 
 ---
-收录时间: 2019/08/30
+收录时间: 2019-08-30
 
 <Vssue :title="$title" />

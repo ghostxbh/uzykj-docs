@@ -1,3 +1,14 @@
+---
+title: MongoDB 连接
+date: 2019-08-28
+tags:
+    - Egg.js
+    - MongoDB
+    - Mongoose
+author: ghostxbh
+location: BeiJing
+summary: 使用Egg进行MongoDB 连接。
+---
 ## MongoDB 连接
 
 ### 启动 MongoDB服务
@@ -121,6 +132,6 @@ module.exports = appInfo => {
 
 
 ---
-收录时间: 2019/08/28
+收录时间: 2019-08-28
 
 <Vssue :title="$title" />

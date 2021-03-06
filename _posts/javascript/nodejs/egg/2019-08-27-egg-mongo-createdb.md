@@ -1,3 +1,14 @@
+---
+title: MongoDB 创建数据库
+date: 2019-08-27
+tags:
+    - Egg.js
+    - MongoDB
+    - Mongoose
+author: ghostxbh
+location: BeiJing
+summary: 使用Egg进行MongoDB 创建数据库。
+---
 ## MongoDB 创建数据库
 
 ### 语法
@@ -46,6 +57,6 @@ MongoDB 中默认的数据库为 test，如果你没有创建新的数据库，�
 
 
 ---
-收录时间: 2019/08/27
+收录时间: 2019-08-27
 
 <Vssue :title="$title" />

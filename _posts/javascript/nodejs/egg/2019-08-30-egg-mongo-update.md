@@ -1,3 +1,14 @@
+---
+title: MongoDB 更新文档
+date: 2019-08-30
+tags:
+    - Egg.js
+    - MongoDB
+    - Mongoose
+author: ghostxbh
+location: BeiJing
+summary: 使用Egg进行MongoDB 更新文档。
+---
 ## MongoDB 更新文档
 
 MongoDB数据更新可以使用`update()`函数。
@@ -51,6 +62,6 @@ async update(user) {
 
 
 ---
-收录时间: 2019/08/30
+收录时间: 2019-08-30
 
 <Vssue :title="$title" />

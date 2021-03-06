@@ -1,3 +1,12 @@
+---
+title: Node.js 模块机制
+date: 2019-08-26
+tags:
+    - Node.js
+author: Nodejs技术栈
+location: Wechat
+summary: Node.js 模块机制采用了 Commonjs 规范，弥补了当前 JavaScript 开发大型应用没有标准的缺陷，类似于 Java 中的类文件，Python 中的 import 机制，Node.js 中可以通过 module.exports、require 来导出和引入一个模块。
+---
 # Node.js 模块机制
 
 Node.js 模块机制采用了 Commonjs 规范，弥补了当前 JavaScript 开发大型应用没有标准的缺陷，类似于 Java 中的类文件，Python 中的 import 机制，Node.js 中可以通过 module.exports、require 来导出和引入一个模块.
@@ -168,6 +177,6 @@ modules.exports = {
 
 
 ---
-收录时间: 2019/08/26
+收录时间: 2019-08-26
 
 <Vssue :title="$title" />

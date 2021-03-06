@@ -1,3 +1,14 @@
+---
+title: MongoDB 删除数据库
+date: 2019-08-29
+tags:
+    - Egg.js
+    - MongoDB
+    - Mongoose
+author: ghostxbh
+location: BeiJing
+summary: 使用Egg进行MongoDB 删除数据库。
+---
 ## MongoDB 删除数据库
 
 ### 语法
@@ -52,6 +63,6 @@ db.collection.drop()
 
 
 ---
-收录时间: 2019/08/29
+收录时间: 2019-08-29
 
 <Vssue :title="$title" />

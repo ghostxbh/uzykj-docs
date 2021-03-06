@@ -1,3 +1,14 @@
+---
+title: MongoDB 查询文档
+date: 2019-08-27
+tags:
+    - Egg.js
+    - MongoDB
+    - Mongoose
+author: ghostxbh
+location: BeiJing
+summary: 使用Egg进行MongoDB 查询文档。
+---
 ## MongoDB 查询文档
 
 ### 语法
@@ -83,6 +94,6 @@ async find(id) {
 
 
 ---
-收录时间: 2019/08/27
+收录时间: 2019-08-27
 
 <Vssue :title="$title" />
