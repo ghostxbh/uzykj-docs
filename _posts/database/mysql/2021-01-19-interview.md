@@ -1,3 +1,12 @@
+---
+title: MySQL面试
+date: 2021-01-19
+tags:
+    - MySQL
+author: 编程界的小学生
+location: Gitee
+summary: MySQL面试收集。
+---
 # 面试收集
 
 ## 1、为什么表数据删掉一半，表文件大小不变？
@@ -113,6 +122,6 @@ SELECT a.* FROM employee a, (SELECT id FROM employee WHERE 条件 LIMIT 1000000,
 - 3.然后调优那些单次执行时间最长的（几乎都是索引有问题，所以调优）、总访问次数最多的SQL（因为这种SQL肯定是系统核心功能的SQL，做到极致，比如发现某种配置类的SQL，内容长期不更新的，就可以放到缓存里等）。
 
 ---
-收录时间: 2021/01/05
+收录时间: 2021-01-19
 
 <Vssue :title="$title" />

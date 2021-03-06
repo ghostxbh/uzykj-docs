@@ -1,3 +1,12 @@
+---
+title: MySQL事务
+date: 2021-01-19
+tags:
+    - MySQL
+    - 事务
+author: 编程界的小学生
+location: Gitee
+---
 # 事务
 
 ## 1、事务的四大特性
@@ -117,6 +126,6 @@ Multi-Version Concurrency Control，多版本并发控制。用于实现提交�
 不能完全解决，比如insert同一个唯一key的话还会唯一key冲突，这就是不能解决的体现，但是可以解决同一个事物里读出数据数量不一致的问题。
 
 ---
-收录时间: 2021/01/05
+收录时间: 2021-01-19
 
 <Vssue :title="$title" />
