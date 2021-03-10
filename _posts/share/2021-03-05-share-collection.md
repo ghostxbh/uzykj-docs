@@ -20,4 +20,4 @@ summary: 分享系列。
 ## 项目篇
 
 ### Node.js
-- [Node.js项目收集](project/node/collection.md)
+- [Node.js项目收集](project/node/2021-03-01-collection.md)
