@@ -20,8 +20,6 @@ summary: JavaScript系列目录。
 - [MongoDB删除文档](nodejs/egg/2019-08-30-egg-mongo-delete.md)
 - [MongoDB修改文档](nodejs/egg/2019-08-30-egg-mongo-update.md)
 - [MongoDB查询文档](nodejs/egg/2019-08-27-egg-mongo-find.md)
-### 分享篇
-- [好文分享一期](nodejs/collect/2021-02-10-artcle01.md)
 
 ### 面试篇
 - [Node.js 模块机制](nodejs/interview/2019-08-26-module-mechanism.md)
