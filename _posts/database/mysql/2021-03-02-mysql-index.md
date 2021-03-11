@@ -10,16 +10,16 @@ summary: MySQL汇总。
 # 汇总
 
 ## 目录
-- 1、[基础、架构、日志](files/blog/database/mysql/basic.md)
-- 2、[储存](files/blog/database/mysql/store.md)
-- 3、[储存引擎](files/blog/database/mysql/engine.md)
-- 4、[事务](files/blog/database/mysql/transation.md)
-- 5、[锁](files/blog/database/mysql/lock.md)
-- 6、[索引](files/blog/database/mysql/indexes.md)
-- 7、[主从复制、读写分离](ms-rw.md)
-- 8、[分库分表](files/blog/database/mysql/sharding.md)
-- 9、[生产实战经验](files/blog/database/mysql/prod.md)
-- 10、[面试收集](files/blog/database/mysql/interview.md)
+- 1、[基础、架构、日志](2021-01-05-basic.md)
+- 2、[储存](2021-01-19-store.md)
+- 3、[储存引擎](2021-01-05-engine.md)
+- 4、[事务](2021-01-19-transation.md)
+- 5、[锁](2021-01-19-lock.md)
+- 6、[索引](2021-01-19-indexes.md)
+- 7、[主从复制、读写分离](2021-01-19-ms-rw.md)
+- 8、[分库分表](2021-01-19-sharding.md)
+- 9、[生产实战经验](2021-01-19-prod.md)
+- 10、[面试收集](2021-01-19-interview.md)
 
 
 ## 资料
