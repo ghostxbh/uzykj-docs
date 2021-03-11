@@ -10,13 +10,13 @@ summary: Redis汇总。
 # 汇总
 
 ## 目录
-- 1、[类型](files/blog/database/redis/type.md)
-- 2、[储存](files/blog/database/redis/basic.md)
-- 3、[持久化](files/blog/database/redis/endurance.md)
-- 4、[事务](files/blog/database/redis/transation.md)
-- 5、[过期淘汰策略](files/blog/database/redis/obsolete.md)
-- 6、[主从、集群、分片](files/blog/database/redis/master_slave.md)
-- 7、[场景案例](files/blog/database/redis/scens.md)
+- 1、[类型](2021-01-21-type.md)
+- 2、[基础](2021-01-11-basic.md)
+- 3、[持久化](2021-01-11-endurance.md)
+- 4、[事务](2021-01-11-transation.md)
+- 5、[过期淘汰策略](2021-01-11-obsolete.md)
+- 6、[主从、集群、分片](2021-01-11-master-slave.md)
+- 7、[场景案例](2021-01-11-scens.md)
 
 ## 资料
 - [官方文档](https://redis.io/documentation)
