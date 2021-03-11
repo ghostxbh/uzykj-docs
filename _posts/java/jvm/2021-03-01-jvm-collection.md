@@ -8,15 +8,15 @@ summary: JVM汇总，JVM相关资料，GC参数、Parallel参数、CMS参数、G
 ---
 # JVM汇总
 
-- 1、[ClassLoader类加载器](files/blog/java/jvm/classloader.md)
+- 1、[ClassLoader类加载器](2021-01-08-classloader.md)
 
-- 2、[Java内存区域](files/blog/java/jvm/memoryarea.md)
+- 2、[Java内存区域](2021-01-08-memoryarea.md)
 
-- 3、[GC垃圾回收](files/blog/java/jvm/gc.md)
+- 3、[GC垃圾回收](2021-01-08-gc.md)
 
-- 4、[实战调优](files/blog/java/jvm/tuning.md)
+- 4、[实战调优](2021-01-08-tuning.md)
 
-- 5、[调优总结](files/blog/java/jvm/tuningsum.md)
+- 5、[调优总结](2020-11-18-tuningsum.md)
 
 ## GC常用参数
 
