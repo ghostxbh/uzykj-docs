@@ -16,6 +16,8 @@ summary: Linux系列目录。
 
 ## CentOS篇
 - [Centos7上使用内核态安装rtpengine](centos/2020-11-23-rtpengine.md)
+- [Linux性能排查](centos/2021-03-24-perfomance-check.md)
+- [Yum命令报错](centos/2021-03-23-yum-rpmdb.md)
 
 ## 华为鲲鹏篇
 - [安装docker-compose](kunpeng/2020-10-14-docker-compose.md)
