@@ -17,6 +17,7 @@ summary: Redis汇总。
 - 5、[过期淘汰策略](2021-01-11-obsolete.md)
 - 6、[主从、集群、分片](2021-01-11-master-slave.md)
 - 7、[场景案例](2021-01-11-scens.md)
+- 8、[Redis文章汇总](2021-03-29-redis-blog.md)
 
 ## 资料
 - [官方文档](https://redis.io/documentation)

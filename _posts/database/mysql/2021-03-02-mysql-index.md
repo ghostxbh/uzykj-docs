@@ -20,6 +20,7 @@ summary: MySQL汇总。
 - 8、[分库分表](2021-01-19-sharding.md)
 - 9、[生产实战经验](2021-01-19-prod.md)
 - 10、[面试收集](2021-01-19-interview.md)
+- 11、[MySQL文章汇总](2021-03-29-mysql-blog.md)
 
 
 ## 资料
