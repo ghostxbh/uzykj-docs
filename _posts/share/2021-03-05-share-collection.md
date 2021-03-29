@@ -17,7 +17,15 @@ summary: 分享系列。
 ### JavaScript
 - [好文分享一期](artcle/javascript/2021-02-10-javascript01.md)
 
+### 数据库
+- [MySQL文章汇总](../database/mysql/2021-03-29-mysql-blog.md)
+- [Redis文章汇总](../database/redis/2021-03-29-redis-blog.md)
+
+
 ## 项目篇
 
 ### Node.js
 - [Node.js项目收集](project/node/2021-03-01-collection.md)
+
+### Java
+- [Java项目收集](project/java/2021-03-29-collection.md)
