@@ -39,6 +39,7 @@ summary: Java系列目录。
 ## 分布式栏
 - [CAP](distributed/2021-02-20-CAP.md)
 - [Zookeeper](distributed/2019-04-20-zookeeper.md)
+- [分布式事务](distributed/2021-03-30-JTA.md)
 
 ## Spring系列
 
