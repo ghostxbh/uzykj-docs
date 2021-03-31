@@ -69,6 +69,16 @@ footter: 京ICP备20004079号 | © 2018-present ghostxbh
 - [gRPC](https://uzykj.com/docs/_posts/protocol/grpc/2019-08-25-grpc.html)
 - [WebSocket](https://uzykj.com/docs/_posts/protocol/websocket/2021-02-03-websocket-403.html)
 
+### 分享篇
+#### 架构
+- [架构一期](https://uzykj.com/docs/_posts/artcle/framework/2021-03-10-framework01.html)
+
+#### JavaScript
+- [好文分享一期](https://uzykj.com/docs/_posts/artcle/javascript/2021-02-10-javascript01.html)
+
+#### 数据库
+- [MySQL文章汇总](https://uzykj.com/docs/_posts/database/mysql/2021-03-29-mysql-blog.html)
+- [Redis文章汇总](https://uzykj.com/docs/_posts/database/redis/2021-03-29-redis-blog.html)
 
 ## Demo篇
 - [Practice](https://github.com/ghostxbh/Practice)
