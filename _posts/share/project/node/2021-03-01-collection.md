@@ -67,3 +67,20 @@ summary: Node.js项目收集。
 
 - 应用程序中嵌入<br>
 试试看@excalidraw/excalidraw。这个软件包可以让您轻松地将Excalidraw作为React组件嵌入到您的应用程序中。
+
+### [moovie.js](https://github.com/BMSVieira/moovie.js)
+JavaScript 写的 HTML5 视频播放器，可以在网页上播放视频。
+
+- 完全可定制
+- 内置字幕偏移量即时调整
+- 即时调整速度
+- 内置支持.vtt和.srt字幕文件
+- 动态添加曲目/字幕
+- 标准化事件/快捷方式/ API
+- 字幕自定义
+- 内置插件，使用您真正需要的代码
+- 没有依赖关系，使用VanillaJS构建
+- 在所有现代浏览器中经过测试
+- 反应灵敏
+
+![](https://camo.githubusercontent.com/3e7069ef230c6e7564b57a45afe50dac6c68a41df316f276a81cafec4348508d/68747470733a2f2f626d737669656972612e6769746875622e696f2f6d6f6f7669652e6a732f64656d6f2d74656d706c6174652f696d616765732f63617074696f6e6f66667365742e706e67)
