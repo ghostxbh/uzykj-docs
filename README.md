@@ -34,7 +34,7 @@ footter: 京ICP备20004079号 | © 2018-present ghostxbh
 - Nest
 - TypeScript
 - 工具合集
-- [好文分享](https://uzykj.com/docs/_posts/javascript/nodejs/collect/2021-02-10-artcle01.html)
+- [好文分享](https://uzykj.com/docs/_posts/share/artcle/javascript/2021-02-10-javascript01.html)
 - [面试合集](https://uzykj.com/docs/_posts/javascript/nodejs/interview/2019-08-26-module-mechanism.html)
 
 ### Vue篇
@@ -71,10 +71,10 @@ footter: 京ICP备20004079号 | © 2018-present ghostxbh
 
 ### 分享篇
 #### 架构
-- [架构一期](https://uzykj.com/docs/_posts/artcle/framework/2021-03-10-framework01.html)
+- [架构一期](https://uzykj.com/docs/_posts/share/artcle/framework/2021-03-10-framework01.html)
 
 #### JavaScript
-- [好文分享一期](https://uzykj.com/docs/_posts/artcle/javascript/2021-02-10-javascript01.html)
+- [好文分享一期](https://uzykj.com/docs/_posts/share/artcle/javascript/2021-02-10-javascript01.html)
 
 #### 数据库
 - [MySQL文章汇总](https://uzykj.com/docs/_posts/database/mysql/2021-03-29-mysql-blog.html)
