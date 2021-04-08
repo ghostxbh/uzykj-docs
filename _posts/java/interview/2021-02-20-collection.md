@@ -4,7 +4,7 @@ date: 2021-02-20
 tags:
     - Alibaba
 author: ghostxbh
-location: BeiJing
+location: blog
 summary: 面试相关汇总，此篇为面试题汇总，没有答案。
 ---
 # 面试汇总

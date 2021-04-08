@@ -8,8 +8,9 @@ tags:
     - JVM
     - IO
     - JUC
+    - Design
 author: ghostxbh
-location: BeiJing
+location: blog
 summary: Java系列目录。
 ---
 # Java系列目录
@@ -40,6 +41,13 @@ summary: Java系列目录。
 - [CAP](distributed/2021-02-20-CAP.md)
 - [Zookeeper](distributed/2019-04-20-zookeeper.md)
 - [分布式事务](distributed/2021-03-30-JTA.md)
+
+## 程序设计
+### 设计原则
+- [单一职责原则](design/principles/2021-04-08-SRP.md)
+
+### 设计模式
+- [代理模式](design/pattern/2019-11-01-proxy.md)
 
 ## Spring系列
 

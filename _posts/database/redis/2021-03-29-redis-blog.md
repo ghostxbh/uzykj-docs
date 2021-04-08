@@ -5,7 +5,7 @@ tags:
     - Redis
     - BitMap
 author: ghostxbh
-location: BeiJing
+location: blog
 summary: Redis文章汇总
 ---
 # Redis文章汇总
@@ -23,3 +23,5 @@ Redis bitmap就是通过一个bit位来表示某个元素对应的值或者状�
 
 ---
 收录时间: 2021-03-29
+
+<Vssue :title="$title" />

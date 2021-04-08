@@ -4,7 +4,7 @@ date: 2019-06-26
 tags:
     - Vue.js
 author: ghostxbh
-location: BeiJing
+location: blog
 summary: Vue.js 使用了基于 HTML 的模板语法，允许开发者声明式地将 DOM 绑定至底层 Vue 实例的数据。
 ---
 # 数据绑定

@@ -6,7 +6,7 @@ tags:
     - MongoDB
     - Mongoose
 author: ghostxbh
-location: BeiJing
+location: blog
 summary: 使用Egg进行MongoDB 连接。
 ---
 ## MongoDB 连接

@@ -4,7 +4,7 @@ date: 2021-03-01
 tags:
     - Node.js
 author: ghostxbh
-location: BeiJing
+location: blog
 summary: Node.js项目收集。
 ---
 # Node.js项目收集

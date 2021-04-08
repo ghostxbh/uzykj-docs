@@ -6,7 +6,7 @@ tags:
     - rtpengine
     - 鲲鹏
 author: ghostxbh
-location: BeiJing
+location: blog
 summary: 华为上安装rtpengine，遇到的问题主要有2点：安装rtpengine很多的依赖不支持arm，需要源代码编译；rtpengine使用内核态运行不了，改为用户态运行
 ---
 # 华为鲲鹏上安装rtpengine

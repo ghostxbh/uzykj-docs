@@ -4,7 +4,7 @@ date: 2019-01-15
 tags:
     - Thread
 author: ghostxbh
-location: BeiJing
+location: blog
 summary: 线程安全问题是指多线程同时执行时，对同一资源的并发操作会导致资源数据的混乱。
 ---
 # 多线程安全问题

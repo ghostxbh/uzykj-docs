@@ -6,7 +6,7 @@ tags:
     - docker-compose
     - 鲲鹏
 author: ghostxbh
-location: BeiJing
+location: blog
 summary: 根据docker官网安装docker-compose即可(docker支持ARM)。
 ---
 # 安装docker-compose

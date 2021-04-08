@@ -4,7 +4,7 @@ date: 2019-07-11
 tags:
     - Vue.js
 author: ghostxbh
-location: BeiJing
+location: blog
 summary: Vue.js的生命周期。
 ---
 # 生命周期

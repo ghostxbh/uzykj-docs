@@ -4,7 +4,7 @@ date: 2018-12-11
 tags:
     - Hibernate
 author: ghostxbh
-location: BeiJing
+location: blog
 summary: Hibernate自增策略异常，及解决方案
 ---
 # Hibernate自增策略异常

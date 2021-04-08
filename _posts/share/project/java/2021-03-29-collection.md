@@ -5,7 +5,7 @@ tags:
     - Java
     - JDK
 author: ghostxbh
-location: BeiJing
+location: blog
 summary: Java项目分享汇总。
 ---
 

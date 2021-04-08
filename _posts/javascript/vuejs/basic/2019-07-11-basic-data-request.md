@@ -6,7 +6,7 @@ tags:
     - axios
     - jsonp
 author: ghostxbh
-location: BeiJing
+location: blog
 summary: Vue.js数据请求的几种方式。
 ---
 # 数据请求

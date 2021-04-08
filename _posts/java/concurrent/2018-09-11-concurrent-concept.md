@@ -5,7 +5,7 @@ tags:
     - Process
     - Thread
 author: ghostxbh
-location: BeiJing
+location: blog
 summary: Java并发中所应用的相关概念
 ---
 # 并发相关概念

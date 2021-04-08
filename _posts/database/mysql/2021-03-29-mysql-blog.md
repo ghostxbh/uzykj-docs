@@ -5,7 +5,7 @@ tags:
     - MySQL
     - MVCC
 author: ghostxbh
-location: BeiJing
+location: blog
 summary: MySQL文章汇总
 ---
 # MySQL文章汇总
@@ -21,8 +21,10 @@ MVCC能解决什么问题，好处是？<br/>
 - 读-写：有线程安全问题，可能会造成事务隔离性问题，可能遇到脏读，幻读，不可重复读
 - 写-写：有线程安全问题，可能会存在更新丢失问题，比如第一类更新丢失，第二类更新丢失
 
-![MVCC](https://upload-images.jianshu.io/upload_images/3133209-be5885051c52fb6a.png)
+![MVCC](http://file.uzykj.com/3133209-be5885051c52fb6a.png)
 
 
 ---
 收录时间: 2021-03-29
+
+<Vssue :title="$title" />

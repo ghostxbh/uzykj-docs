@@ -6,7 +6,7 @@ tags:
     - Redis
     - ClickHouse
 author: ghostxbh
-location: BeiJing
+location: blog
 summary: 数据库系列目录。
 ---
 # 数据库系列目录

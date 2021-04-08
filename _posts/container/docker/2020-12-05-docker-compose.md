@@ -4,7 +4,7 @@ date: 2020-12-05
 tags:
     - docker-compose
 author: ghostxbh
-location: BeiJing
+location: blog
 summary: 安装docker-compose
 ---
 # 安装docker-compose

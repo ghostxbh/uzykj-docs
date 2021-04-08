@@ -4,7 +4,7 @@ date: 2021-03-02
 tags:
     - MySQL
 author: ghostxbh
-location: BeiJing
+location: blog
 summary: MySQL汇总。
 ---
 # 汇总

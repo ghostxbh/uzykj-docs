@@ -3,7 +3,7 @@ title: Happends-Before规则
 date: 2018-09-11
 tags:
 author: ghostxbh
-location: BeiJing
+location: blog
 summary: Happends-Before规则
 ---
 # Happends-Before规则

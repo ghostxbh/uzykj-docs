@@ -4,7 +4,7 @@ date: 2019-06-26
 tags:
     - Vue.js
 author: ghostxbh
-location: BeiJing
+location: blog
 summary: 可以用 `v-on` 指令监听 `DOM` 事件，并在触发时运行一些 `JavaScript` 代码。
 ---
 # 定义方法、对象事件

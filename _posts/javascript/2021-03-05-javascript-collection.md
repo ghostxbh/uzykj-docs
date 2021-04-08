@@ -5,7 +5,7 @@ tags:
     - Node.js
     - Vue.js
 author: ghostxbh
-location: BeiJing
+location: blog
 summary: JavaScript系列目录。
 ---
 # JavaScript系列目录

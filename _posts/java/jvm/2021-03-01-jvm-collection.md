@@ -3,7 +3,7 @@ title: JVM汇总
 date: 2021-03-01
 tags:
 author: ghostxbh
-location: BeiJing
+location: blog
 summary: JVM汇总，JVM相关资料，GC参数、Parallel参数、CMS参数、G1参数。
 ---
 # JVM汇总

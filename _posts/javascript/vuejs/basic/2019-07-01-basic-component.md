@@ -4,7 +4,7 @@ date: 2019-07-01
 tags:
     - Vue.js
 author: ghostxbh
-location: BeiJing
+location: blog
 summary: 可以把公共的页面，如页面头部、底部抽离出来，提供给其他页面重复使用。
 ---
 # Vue组件

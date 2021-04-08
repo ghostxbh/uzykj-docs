@@ -6,7 +6,7 @@ tags:
     - Linux
     - rtpengine
 author: ghostxbh
-location: BeiJing
+location: blog
 summary: Centos7上使用内核态安装rtpengine。
 ---
 # Centos7上使用内核态安装rtpengine

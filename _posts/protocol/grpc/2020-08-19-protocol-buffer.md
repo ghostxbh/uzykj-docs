@@ -4,7 +4,7 @@ date: 2020-08-19
 tags:
     - Protocol Buffer
 author: ghostxbh
-location: BeiJing
+location: blog
 summary: 协议缓冲区是Google的与语言无关，与平台无关的可扩展机制，用于对结构化数据进行序列化–以XML为例，但更小，更快，更简单。您定义要一次构造数据的方式，然后可以使用生成的特殊源代码轻松地使用各种语言在各种数据流中写入和读取结构化数据。
 ---
 # Protocol Buffer（协议缓冲区）

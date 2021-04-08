@@ -5,7 +5,7 @@ tags:
     - Zookeeper
     - CAP
 author: pyinx
-location: BeiJing
+location: blog
 summary: Zookeeper的介绍与使用场景，使用操作等。
 ---
 # Zookeeper

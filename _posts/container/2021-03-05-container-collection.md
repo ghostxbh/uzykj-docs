@@ -4,7 +4,7 @@ date: 2021-03-05
 tags:
     - Docker
 author: ghostxbh
-location: BeiJing
+location: blog
 summary: 容器系列目录。
 ---
 # 容器系列目录

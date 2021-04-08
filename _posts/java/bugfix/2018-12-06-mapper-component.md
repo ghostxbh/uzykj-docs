@@ -4,7 +4,7 @@ date: 2018-12-06
 tags:
     - SpringBoot
 author: ghostxbh
-location: BeiJing
+location: blog
 summary: Mapper Component扫描异常，及解决方案
 ---
 # Mapper Component扫描异常

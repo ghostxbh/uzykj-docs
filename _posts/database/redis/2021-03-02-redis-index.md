@@ -4,7 +4,7 @@ date: 2021-03-02
 tags:
     - Redis
 author: ghostxbh
-location: BeiJing
+location: blog
 summary: Redis汇总。
 ---
 # 汇总

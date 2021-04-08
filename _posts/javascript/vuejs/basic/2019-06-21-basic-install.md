@@ -5,7 +5,7 @@ tags:
     - Vue.js
     - Vue-CLI
 author: ghostxbh
-location: BeiJing
+location: blog
 summary: 搭建Vue.js的开发环境，及使用Vue-CLI脚手架命令。
 ---
 # 开发环境

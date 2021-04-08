@@ -6,7 +6,7 @@ tags:
     - MongoDB
     - Mongoose
 author: ghostxbh
-location: BeiJing
+location: blog
 summary: 使用Egg进行MongoDB 更新文档。
 ---
 ## MongoDB 更新文档

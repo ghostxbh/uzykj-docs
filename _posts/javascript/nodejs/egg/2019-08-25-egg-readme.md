@@ -4,7 +4,7 @@ date: 2019-08-25
 tags:
     - Egg.js
 author: ghostxbh
-location: BeiJing
+location: blog
 summary: Egg 示例。
 ---
 # Egg 示例

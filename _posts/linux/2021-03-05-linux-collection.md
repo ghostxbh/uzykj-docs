@@ -6,7 +6,7 @@ tags:
     - CentOS
     - 鲲鹏
 author: ghostxbh
-location: BeiJing
+location: blog
 summary: Linux系列目录。
 ---
 # Linux系列目录

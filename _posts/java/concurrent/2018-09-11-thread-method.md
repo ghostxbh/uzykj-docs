@@ -4,7 +4,7 @@ date: 2018-09-11
 tags:
     - Thread
 author: ghostxbh
-location: BeiJing
+location: blog
 summary: Java并发中：Thread类、Object类、Lock类、Condition类的常用方法。
 ---
 # 线程相关的常用方法
