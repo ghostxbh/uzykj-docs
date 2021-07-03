@@ -33,9 +33,14 @@ summary: JavaScript系列目录。
 - [Vue.js数据请求](vuejs/basic/2019-07-11-basic-data-request.md)
 - [Vue.js生命周期](vuejs/basic/2019-07-11-basic-life-cycle.md)
 - [Vue.js父子组件传值](vuejs/basic/2019-07-11-basic-pass-value.md)
+### 项目组件
+- [browserslist](vuejs/project/2021-07-02-browserslist.md)
 
 ## HTML
 - [HTML Tips](html/2021-06-30-html-tips.md)
+
+## JS
+- [高频 dom 操作和页面性能优化探索](js/2021-07-01-dom-optimization.md)
 
 ## Threejs
 
