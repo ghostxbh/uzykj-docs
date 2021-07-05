@@ -2,9 +2,9 @@
 title: 阿里淘宝前端面试题汇总
 date: 2021-06-22
 tags:
-- HTML
-- CSS
-- JavaScript
+    - HTML
+    - CSS
+    - JavaScript
 author: ghostxbh
 location: blog
 summary: 阿里淘宝前端面试。
