@@ -47,6 +47,10 @@ summary: JavaScript系列目录。
 - [高频 dom 操作和页面性能优化探索](js/2021-07-01-dom-optimization.md)
 
 ## Threejs
+- Threejs学习和总结基础篇
+    - [概述](threejs/2021-07-27-threejs-summary.md)
+    - [场景Scene](threejs/2021-07-27-threejs-scene.md)
+    - [几何体Geometry](threejs/2021-07-29-threejs-geometry.md)
 
 ## 面试系列
 - [Node.js 模块机制](interview/2019-08-26-module-mechanism.md)
