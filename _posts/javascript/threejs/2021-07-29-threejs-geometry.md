@@ -1,6 +1,7 @@
 ---
 title: Threejs学习和总结基础篇 - 几何体Geometry
 date: 2021-07-29
+tags:
     - Threejs
     - 3D
     - WebGL
