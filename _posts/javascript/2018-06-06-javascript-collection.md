@@ -51,6 +51,9 @@ summary: JavaScript系列目录。
     - [概述](threejs/2021-07-27-threejs-summary.md)
     - [场景Scene](threejs/2021-07-27-threejs-scene.md)
     - [几何体Geometry](threejs/2021-07-29-threejs-geometry.md)
+    - [材质Material](threejs/2021-08-04-threejs-material.md)
+    - [相机Camera](threejs/2021-08-05-threejs-camera.md)
+    - [粒子Points](threejs/2021-08-06-threejs-points.md)
 
 ## 面试系列
 - [Node.js 模块机制](interview/2019-08-26-module-mechanism.md)
