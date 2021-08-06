@@ -1,7 +1,14 @@
 ---
-title: Threejs学习和总结基础篇 - 相机Camera date: 2021-08-05 tags:
-- Threejs - 3D - WebGL - Camera author: aigisss location: blog summary: 相机是 Three.js
-抽象出来的一个对象，使用此对象，我们可以定义显示的内容，并且可以通过移动相机位置来显示不同的内容。
+title: Threejs学习和总结基础篇 - 相机Camera 
+date: 2021-08-05 
+tags:
+    - Threejs 
+    - 3D 
+    - WebGL 
+    - Camera 
+author: aigisss 
+location: blog 
+summary: 相机是 Three.js 抽象出来的一个对象，使用此对象，我们可以定义显示的内容，并且可以通过移动相机位置来显示不同的内容。
 ---
 
 # 相机Camera
