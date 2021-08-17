@@ -15,6 +15,9 @@ summary: JavaScript系列目录。
 # JavaScript系列目录
 
 ## Node.js系列
+### 汇总篇
+- [Ubuntu安装新版本nodejs的5种姿势](nodejs/basic/2021-08-17-ubuntu-install-nodejs.md)
+
 ### Egg.js篇
 - [Egg示例](nodejs/egg/2019-08-25-egg-readme.md)
 - [MongoDB连接](nodejs/egg/2019-08-28-egg-mongo-connection.md)
