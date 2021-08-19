@@ -1,10 +1,10 @@
 ---
 title: Ubuntu安装新版本nodejs的5种姿势
-date: 2018-08-17
+date: 2021-08-17
 tags:
     - Node.js
     - Ubuntu
-author: user
+author: ganiks
 location: cnblogs
 summary: Ubuntu安装新版本nodejs的5种姿势。
 ---
