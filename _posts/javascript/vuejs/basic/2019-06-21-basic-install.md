@@ -2,7 +2,7 @@
 title: Vue.js开发环境
 date: 2019-06-21
 tags:
-    - Vue.js
+    - Vuejs
     - Vue-CLI
 author: ghostxbh
 location: blog

@@ -2,7 +2,7 @@
 title: Node.js中的进程管理 
 date: 2021-08-30 
 tags:
-    - Node.js 
+    - Nodejs 
     - process 
     - cluster 
     - child_process 

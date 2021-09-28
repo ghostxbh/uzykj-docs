@@ -2,7 +2,7 @@
 title: Vue.js父子组件传值
 date: 2019-07-11
 tags:
-    - Vue.js
+    - Vuejs
 author: ghostxbh
 location: blog
 summary: 父组件调用子组件时，绑定动态属性。

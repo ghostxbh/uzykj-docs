@@ -2,7 +2,7 @@
 title: Vue.js数据请求
 date: 2019-07-11
 tags:
-    - Vue.js
+    - Vuejs
     - axios
     - jsonp
 author: ghostxbh
