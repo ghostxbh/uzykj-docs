@@ -1,24 +1,24 @@
 ---
-title: JavaScript系列目录
+title: JavaScript目录
 date: 2018-06-06
 tags:
-    - Node.js
-    - Vue.js
+    - Nodejs
+    - Vuejs
     - JavaScript
     - HTML
     - CSS
     - 面试
 author: ghostxbh
 location: blog
-summary: JavaScript系列目录。
+summary: JavaScript目录。
 ---
-# JavaScript系列目录
+# JavaScript目录
 
-## Node.js系列
-### 汇总篇
+## Nodejs
+### 汇总
 - [Ubuntu安装新版本nodejs的5种姿势](nodejs/basic/2021-08-17-ubuntu-install-nodejs.md)
 
-### Egg.js篇
+### Egg.js
 - [Egg示例](nodejs/egg/2019-08-25-egg-readme.md)
 - [MongoDB连接](nodejs/egg/2019-08-28-egg-mongo-connection.md)
 - [MongoDB创建数据库](nodejs/egg/2019-08-27-egg-mongo-createdb.md)
@@ -29,8 +29,8 @@ summary: JavaScript系列目录。
 - [MongoDB查询文档](nodejs/egg/2019-08-27-egg-mongo-find.md)
 
 
-## Vue.js系列
-### 基础篇
+## Vue.js
+### 基础
 - [Vue.js开发环境](vuejs/basic/2019-06-21-basic-install.md)
 - [Vue.js属性绑定](vuejs/basic/2019-06-21-basic-bind-properties.md)
 - [Vue.js数据绑定](vuejs/basic/2019-06-26-basic-bind-data.md)
@@ -58,7 +58,11 @@ summary: JavaScript系列目录。
     - [相机Camera](threejs/2021-08-05-threejs-camera.md)
     - [粒子Points](threejs/2021-08-06-threejs-points.md)
 
-## 面试系列
+## 规范
+- [JavaScript编码规范](style/2021-09-28-javascript-style.md)
+- [NodeJS编码规范](style/2021-09-28-nodejs-style.md)
+
+## 面试
 - [Node.js 模块机制](interview/2019-08-26-module-mechanism.md)
 - [2021阿里淘宝前端面试](interview/2021-06-22-ali-taobao-front.md)
 
