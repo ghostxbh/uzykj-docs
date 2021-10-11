@@ -1,10 +1,13 @@
 ---
 title: 安装docker-compose
 date: 2020-10-14
+sidebar: 'auto'
+categories:
+  - Linux
 tags:
-    - docker
-    - docker-compose
-    - 鲲鹏
+  - docker
+  - docker-compose
+  - 鲲鹏
 author: ghostxbh
 location: blog
 summary: 根据docker官网安装docker-compose即可(docker支持ARM)。

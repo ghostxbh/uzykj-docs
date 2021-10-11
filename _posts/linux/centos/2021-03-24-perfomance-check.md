@@ -1,8 +1,11 @@
 ---
 title: Java应用性能排查
 date: 2021-03-24
+sidebar: 'auto'
+categories:
+  - Linux
 tags:
-    - Linux
+  - Linux
 author: 芋道源码
 location: 公众号
 summary: 内存排查、CPU瓶颈排查、网络IO排查、磁盘IO排查、应用排查

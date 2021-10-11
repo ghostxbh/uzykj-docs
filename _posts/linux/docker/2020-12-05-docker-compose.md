@@ -1,8 +1,11 @@
 ---
 title: 安装docker-compose
 date: 2020-12-05
+sidebar: 'auto'
+categories:
+  - Linux
 tags:
-    - docker-compose
+  - docker-compose
 author: ghostxbh
 location: blog
 summary: 安装docker-compose

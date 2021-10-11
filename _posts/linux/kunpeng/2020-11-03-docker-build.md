@@ -1,9 +1,12 @@
 ---
 title: 使用docker构建多平台镜像
 date: 2020-11-03
+sidebar: 'auto'
+categories:
+  - Linux
 tags:
-    - docker
-    - 鲲鹏
+  - docker
+  - 鲲鹏
 author: ghostxbh
 location: blog
 summary: 由于鲲鹏的处理器是arm的，很多开源软件如redis最新版本都没有arm的镜像，所以在鲲鹏上运行这些开源软件会有问题。

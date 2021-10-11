@@ -1,10 +1,13 @@
 ---
 title: Centos7上使用内核态安装rtpengine
 date: 2020-11-23
+sidebar: 'auto'
+categories:
+  - Linux
 tags:
-    - CentOS
-    - Linux
-    - rtpengine
+  - CentOS
+  - Linux
+  - rtpengine
 author: ghostxbh
 location: blog
 summary: Centos7上使用内核态安装rtpengine。

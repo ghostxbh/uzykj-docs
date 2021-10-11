@@ -1,8 +1,11 @@
 ---
 title: Docker 替换镜像源
 date: 2021-06-24
+sidebar: 'auto'
+categories:
+  - Linux
 tags:
-    - docker
+  - docker
 author: ghostxbh
 location: blog
 summary: Docker 替换镜像源

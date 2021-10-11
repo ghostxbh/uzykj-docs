@@ -1,10 +1,12 @@
 ---
 title: Linux系列目录
 date: 2018-06-06
+sidebar: 'auto'
+categories:
+  - Linux
 tags:
-    - Linux
-    - CentOS
-    - 鲲鹏
+  - CentOS
+  - 鲲鹏
 author: ghostxbh
 location: blog
 summary: Linux系列目录。

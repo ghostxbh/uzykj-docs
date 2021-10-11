@@ -1,8 +1,10 @@
 ---
 title: sudo权限报错
 date: 2021-06-28
+sidebar: 'auto'
+categories:
+  - Linux
 tags:
-    - Linux
 author: z-sm
 location: Linux社区
 summary: 解决linux下sudo更改文件权限报错 xxx is not in the sudoers file. This incident will be reported.
