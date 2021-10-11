@@ -1,9 +1,14 @@
 ---
 title: Java内存区域
 date: 2021-01-08
+sidebar: 'auto'
+categories:
+  - Java
 tags:
-author: 编程界的小学生
-location: Gitee
+  - 内存结构
+  - JVM内存区域
+author: ghostxbh
+location: blog
 summary: 本文介绍Java内存结构、分配算法、存储布局等。
 ---
 # Java内存区域

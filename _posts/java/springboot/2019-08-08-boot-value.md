@@ -1,8 +1,11 @@
 ---
 title: SpringBoot读取配置值
 date: 2019-08-08
+sidebar: 'auto'
+categories:
+  - Java
 tags:
-    - SpringBoot
+  - SpringBoot
 author: ghostxbh
 location: blog
 summary: 介绍SpringBoot读取配置的几种方式。

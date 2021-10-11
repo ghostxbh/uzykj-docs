@@ -1,15 +1,18 @@
 ---
 title: Java系列目录
 date: 2018-06-06
+sidebar: 'auto'
+categories:
+  - Java
 tags:
-    - Java
-    - Spring
-    - Concurrent
-    - JVM
-    - IO
-    - JUC
-    - Design
-    - 面试
+  - Java
+  - Spring
+  - Concurrent
+  - JVM
+  - IO
+  - JUC
+  - Design
+  - 面试
 author: ghostxbh
 location: blog
 summary: Java系列目录。

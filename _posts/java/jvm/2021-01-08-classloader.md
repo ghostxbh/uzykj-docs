@@ -1,10 +1,13 @@
 ---
 title: ClassLoader类加载器
 date: 2021-01-08
+sidebar: 'auto'
+categories:
+  - Java
 tags:
-    - ClassLoader
-author: 编程界的小学生
-location: Gitee
+  - ClassLoader
+author: ghostxbh
+location: blog
 summary: 本文介绍ClassLoader类加载器的加载过程、种类、范围，双亲委派等。
 ---
 # ClassLoader 类加载器

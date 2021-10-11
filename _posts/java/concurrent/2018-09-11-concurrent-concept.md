@@ -1,9 +1,12 @@
 ---
 title: 并发概念
 date: 2018-09-11
+sidebar: 'auto'
+categories:
+  - Java
 tags:
-    - Process
-    - Thread
+  - Process
+  - Thread
 author: ghostxbh
 location: blog
 summary: Java并发中所应用的相关概念

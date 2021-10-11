@@ -1,10 +1,13 @@
 ---
 title: Synchronized相关
 date: 2021-01-15
+sidebar: 'auto'
+categories:
+  - Java
 tags:
-    - Synchronized
-author: 编程界的小学生
-location: Gitee
+  - Synchronized
+author: ghostxbh
+location: blog
 summary: 介绍Java中Synchronized锁，Synchronized锁的功能及其使用。
 ---
 # Synchronized相关

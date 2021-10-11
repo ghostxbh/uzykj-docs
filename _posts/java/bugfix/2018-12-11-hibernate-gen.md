@@ -1,8 +1,12 @@
 ---
 title: Hibernate自增策略异常
 date: 2018-12-11
+sidebar: 'auto'
+categories:
+  - Java
 tags:
-    - Hibernate
+  - bugfix
+  - Hibernate
 author: ghostxbh
 location: blog
 summary: Hibernate自增策略异常，及解决方案

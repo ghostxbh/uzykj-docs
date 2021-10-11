@@ -1,8 +1,12 @@
 ---
 title: 面试汇总
 date: 2021-02-20
+sidebar: 'auto'
+categories:
+  - Java
 tags:
-    - Alibaba
+  - 面试
+  - Alibaba
 author: ghostxbh
 location: blog
 summary: 面试相关汇总，此篇为面试题汇总，没有答案。

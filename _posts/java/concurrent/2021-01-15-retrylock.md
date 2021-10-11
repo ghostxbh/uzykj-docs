@@ -1,12 +1,15 @@
 ---
 title: 重入锁相关
 date: 2021-01-15
+sidebar: 'auto'
+categories:
+  - Java
 tags:
-    - AQS
-    - TryLock
-    - Lock
-author: 编程界的小学生
-location: Gitee
+  - AQS
+  - TryLock
+  - 锁
+author: ghostxbh
+location: blog
 summary: 介绍Java中重入锁，TryLock与Lock、AQS、加锁解锁等。
 ---
 # 重入锁相关

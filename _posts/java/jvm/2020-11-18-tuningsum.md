@@ -1,7 +1,11 @@
 ---
 title: 调优总结
 date: 2020-11-18
+sidebar: 'auto'
+categories:
+  - Java
 tags:
+  - JVM调优
 author: ghostxbh
 location: blog
 ---
@@ -82,10 +86,10 @@ location: blog
 所以，最后，这段代码将在日志文件中写入`“This is a test0 1 2 3 4 5 6 7 8 9”`。
 
 ```java
-StringBuilder sb = new StringBuilder(“This is a test”);
-for (int i=0; i<10; i++) {
-   sb.append(i);
-   sb.append(” “);
+StringBuilder sb =newStringBuilder(“This is a test”);
+for(inti=0; i<10; i++) {
+ sb.append(i);
+ sb.append(” “);
 }
 log.info(sb.toString());
 ```
@@ -107,7 +111,7 @@ log.info(sb.toString());
 
 但是，如果你只是将字符串分成多行来改善代码的可读性，那情况就不一样了。
 ```
-Query q = em.createQuery(“SELECT a.id, a.firstName, a.lastName FROM Author a WHERE a.id = :id”);
+Query q = em.createQuery(“SELECTa.id, a.firstName, a.lastName FROMAuthor a WHEREa.id = :id”);
 ```
 
 在这些情况下，你应该用一个简单的+来连接你的字符串。Java编译器会对此优化并在编译时执行连接。
@@ -135,8 +139,8 @@ BigInteger和BigDecimal比简单的long或double需要更多的内存，并且�
 
 这里有两个反面例子。
 ```
-log.debug(“User [” + userName + “] called method X with [” + i + “]”);
-log.debug(String.format(“User [%s] called method X with [%d]”, userName, i));
+log.debug(“User[” + userName + “]calledmethodXwith[” + i + “]”);
+log.debug(String.format(“User[%s]calledmethodXwith[%d]”,userName,i));
 ```
 
 在上面两种情况中，你都将执行创建日志消息所有必需的步骤，在不知道日志框架是否将使用日志消息的前提下。
@@ -144,12 +148,12 @@ log.debug(String.format(“User [%s] called method X with [%d]”, userNa
 
 ```java
 // do this
-if (log.isDebugEnabled()) {
-   log.debug(“User [” + userName + “] called method X with [” + i + “]”);
+if(log.isDebugEnabled()) {
+ log.debug(“User [” + userName + “] called method X with [” + i + “]”);
 }
 ```
 
-## 10.使用Apache Commons StringUtils.Replace而不是String.replace
+## 10.使用Apache CommonsStringUtils.Replace而不是String.replace
 
 一般来说，String.replace方法工作正常，效率很高，尤其是在使用Java 9的情况下。
 但是，如果你的应用程序需要大量的替换操作，并且没有更新到最新的Java版本，那么我们依然有必要查找更快和更有效的替代品。
@@ -161,9 +165,9 @@ if (log.isDebugEnabled()) {
 
 ```java
 // replace this
-test.replace(“test”, “simple test”);
+test.replace(“test”, “simpletest”);
 // with this
-StringUtils.replace(test, “test”, “simple test”);
+StringUtils.replace(test, “test”, “simpletest”);
 ```
 
 ## 11.缓存昂贵的资源，如数据库连接

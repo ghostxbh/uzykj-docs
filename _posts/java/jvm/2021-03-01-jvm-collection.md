@@ -1,6 +1,9 @@
 ---
 title: JVM汇总
 date: 2021-03-01
+sidebar: 'auto'
+categories:
+  - Java
 tags:
 author: ghostxbh
 location: blog

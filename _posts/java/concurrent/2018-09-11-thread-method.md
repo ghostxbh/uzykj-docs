@@ -1,8 +1,11 @@
 ---
 title: 线程相关的常用方法
 date: 2018-09-11
+sidebar: 'auto'
+categories:
+  - Java
 tags:
-    - Thread
+  - Thread
 author: ghostxbh
 location: blog
 summary: Java并发中：Thread类、Object类、Lock类、Condition类的常用方法。

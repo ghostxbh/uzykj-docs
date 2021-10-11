@@ -1,12 +1,15 @@
 ---
 title: 并发基础
 date: 2021-01-15
+sidebar: 'auto'
+categories:
+  - Java
 tags:
-    - volatile
-    - CAS
-    - lock
-author: 编程界的小学生
-location: Gitee
+  - volatile
+  - CAS
+  - 锁
+author: ghostxbh
+location: blog
 summary: Java并发基础，介绍volatile关键词，CAS操作及问题。
 ---
 # 基础

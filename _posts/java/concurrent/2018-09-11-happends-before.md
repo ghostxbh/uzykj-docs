@@ -1,7 +1,11 @@
 ---
 title: Happends-Before规则
 date: 2018-09-11
+sidebar: 'auto'
+categories:
+  - Java
 tags:
+  - Happends-Before
 author: ghostxbh
 location: blog
 summary: Happends-Before规则

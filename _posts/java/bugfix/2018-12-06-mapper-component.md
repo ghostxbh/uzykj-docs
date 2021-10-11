@@ -1,8 +1,12 @@
 ---
 title: Mapper Component扫描异常
 date: 2018-12-06
+sidebar: 'auto'
+categories:
+  - Java
 tags:
-    - SpringBoot
+  - bugfix
+  - Mapper Component
 author: ghostxbh
 location: blog
 summary: Mapper Component扫描异常，及解决方案
@@ -63,11 +67,11 @@ application运行时，需扫描同级子包，如果mapper没有跟dao在一个
 接下来我们简单写个例子进行测试下。
 
 第一步：新建两个新包
-      我们在项目中新建两个包`cn.kfit`;`org.kfit`；
+我们在项目中新建两个包`cn.kfit`;`org.kfit`；
 
 第二步：新建两个测试类；
 在这里为了方便测试，我们让我们的类在启动的时候就进行执行，所以我们就编写两个类，实现接口CommandLineRunner，这样在启动的时候我们就可以看到打印信息了。
-`cn.kfit.MyCommandLineRunner1`  : 
+`cn.kfit.MyCommandLineRunner1`
 
 ```java
 package cn.kfit;
@@ -104,12 +108,12 @@ publicclass MyCommandLineRunner2 implements CommandLineRunner {
 ```
 
 
-第三步：启动类进行注解指定
-在App.java类中加入如下注解：
-//可以使用：`basePackageClasses={},basePackages={}`
+第三步：启动类进行注解指定  
+在App.java类中加入如下注解：  
+可以使用：
+`basePackageClasses={},basePackages={}`  
 `@ComponentScan(basePackages={"cn.kfit","org.kfit"})`
 
- 
 启动如果看到打印信息：
 ```
 MyCommandLineRunner1.run()

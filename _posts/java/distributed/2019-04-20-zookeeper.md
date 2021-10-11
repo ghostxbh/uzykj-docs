@@ -1,9 +1,12 @@
 ---
 title: Zookeeper
 date: 2019-04-20
+sidebar: 'auto'
+categories:
+  - Java
 tags:
-    - Zookeeper
-    - CAP
+  - Zookeeper
+  - CAP
 author: pyinx
 location: blog
 summary: Zookeeper的介绍与使用场景，使用操作等。
