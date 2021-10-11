@@ -1,11 +1,14 @@
 ---
 title: Threejs学习和总结基础篇 - 粒子Points
 date: 2021-08-06
+sidebar: 'auto'
+categories:
+  - Javascript
 tags:
-    - Threejs
-    - 3D
-    - WebGL
-    - Points
+  - Threejs
+  - 3D
+  - WebGL
+  - Points
 author: aigisss
 location: blog
 summary: 我们将学习到 Sprite 精灵和 Points 粒子，这两种对象共同点就是我们通过相机查看它们时，始终看到的是它们的正面，它们总朝向相机。通过它们的这种特性，我们可以实现广告牌的效果，或实现更多的比如雨雪、烟雾等更加绚丽的特效。

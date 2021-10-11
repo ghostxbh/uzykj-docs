@@ -1,10 +1,13 @@
 ---
 title: MongoDB 更新文档
 date: 2019-08-30
+sidebar: 'auto'
+categories:
+  - Javascript
 tags:
-    - Egg.js
-    - MongoDB
-    - Mongoose
+  - Egg.js
+  - MongoDB
+  - Mongoose
 author: ghostxbh
 location: blog
 summary: 使用Egg进行MongoDB 更新文档。
@@ -49,7 +52,7 @@ db.userdetails.update(
 
 + [mongoose](https://github.com/ghostxbh/egg-mongodb-demo/blob/master/app/service/user.js) 操作
 
-```js
+```nodejs
 async update(user) {
     const {ctx} = this;
     user.password = ctx.helper.encrypt(user.password);

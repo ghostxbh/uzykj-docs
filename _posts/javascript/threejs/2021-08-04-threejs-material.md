@@ -1,11 +1,14 @@
 ---
 title: Threejs学习和总结基础篇 - 材质Material
 date: 2021-08-04
+sidebar: 'auto'
+categories:
+  - Javascript
 tags:
-    - Threejs
-    - 3D
-    - WebGL
-    - Material
+  - Threejs
+  - 3D
+  - WebGL
+  - Material
 author: aigisss
 location: blog
 summary: 模型的表现，也就是我们看到的的模型外观——材质。

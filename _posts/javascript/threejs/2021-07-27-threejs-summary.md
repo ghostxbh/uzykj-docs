@@ -1,10 +1,13 @@
 ---
 title: Threejs学习和总结基础篇 - 概述
 date: 2021-07-27
+sidebar: 'auto'
+categories:
+  - Javascript
 tags:
-    - Threejs
-    - 3D
-    - WebGL
+  - Threejs
+  - 3D
+  - WebGL
 author: aigisss
 location: blog
 summary: 使用 Three.js 显示创建的内容，我们必须需要的三大件是：渲染器、相机和场景。

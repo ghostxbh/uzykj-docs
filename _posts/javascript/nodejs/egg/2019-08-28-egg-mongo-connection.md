@@ -1,10 +1,13 @@
 ---
 title: MongoDB 连接
 date: 2019-08-28
+sidebar: 'auto'
+categories:
+  - Javascript
 tags:
-    - Egg.js
-    - MongoDB
-    - Mongoose
+  - Egg.js
+  - MongoDB
+  - Mongoose
 author: ghostxbh
 location: blog
 summary: 使用Egg进行MongoDB 连接。

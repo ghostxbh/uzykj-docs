@@ -1,11 +1,14 @@
 ---
 title: Threejs学习和总结基础篇 - 几何体Geometry
 date: 2021-07-29
+sidebar: 'auto'
+categories:
+  - Javascript
 tags:
-    - Threejs
-    - 3D
-    - WebGL
-    - Geometry
+  - Threejs
+  - 3D
+  - WebGL
+  - Geometry
 author: aigisss
 location: blog
 summary: 一个模型是由几何体 Geometry 和材质 Material 组成。Three.js 内置了很多的几何体种类，如立方体、三棱锥、球、八面体、十二面体、二十面体等等，将介绍这些几何体的模型创建和几何体的通用方法。

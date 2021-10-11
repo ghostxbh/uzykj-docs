@@ -1,11 +1,14 @@
 ---
 title: Threejs学习和总结基础篇 - 场景Scene
 date: 2021-07-27
+sidebar: 'auto'
+categories:
+  - Javascript
 tags:
-    - Threejs
-    - 3D
-    - WebGL
-    - Scene
+  - Threejs
+  - 3D
+  - WebGL
+  - Scene
 author: aigisss
 location: blog
 summary: 场景是我们每个 Three.js 项目里面放置内容的容器，我们也可以拥有多个场景进行切换展示，你可以在场景内放置你的模型、灯光和照相机。还可以通过调整场景的位置，让场景内的所有内容都一起跟着调整位置。

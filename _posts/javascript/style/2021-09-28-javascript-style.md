@@ -1,9 +1,11 @@
 ---
 title: JavaScript编码规范
 date: 2021-09-28
+sidebar: 'auto'
+categories:
+  - Javascript
 tags:
-    - JavaScript
-    - Standard
+  - Standard
 author: ghostxbh
 location: blog
 summary: JavaScript编码规范。

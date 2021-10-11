@@ -1,9 +1,12 @@
 ---
 title: 高频 dom 操作和页面性能优化探索 
-date: 2021-07-01 
+date: 2021-07-01
+sidebar: 'auto'
+categories:
+  - Javascript
 tags:
-    - Dom 
-    - JavaScript 
+  - DOM
+  - 优化
 author: huang-qing 
 location: blog 
 summary: 通过js操作DOM的代价很高，影响页面性能的主要问题有如下几点：访问和修改DOM元素；修改DOM元素的样式，导致重绘或重排；通过对DOM元素的事件处理，完成与用户的交互功能。

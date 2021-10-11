@@ -1,8 +1,11 @@
 ---
 title: Vue.js属性绑定
 date: 2019-06-21
+sidebar: 'auto'
+categories:
+  - Javascript
 tags:
-    - Vuejs
+  - Vuejs
 author: ghostxbh
 location: blog
 summary: 操作元素的`class`列表和内联样式是数据绑定的一个常见需求。

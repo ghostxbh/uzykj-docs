@@ -1,8 +1,11 @@
 ---
 title: Vue.js数据绑定
 date: 2019-06-26
+sidebar: 'auto'
+categories:
+  - Javascript
 tags:
-    - Vuejs
+  - Vuejs
 author: ghostxbh
 location: blog
 summary: Vue.js 使用了基于 HTML 的模板语法，允许开发者声明式地将 DOM 绑定至底层 Vue 实例的数据。

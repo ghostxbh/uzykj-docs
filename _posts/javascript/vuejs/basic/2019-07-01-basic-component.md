@@ -1,8 +1,11 @@
 ---
 title: Vue.js组件
 date: 2019-07-01
+sidebar: 'auto'
+categories:
+  - Javascript
 tags:
-    - Vuejs
+  - Vuejs
 author: ghostxbh
 location: blog
 summary: 可以把公共的页面，如页面头部、底部抽离出来，提供给其他页面重复使用。

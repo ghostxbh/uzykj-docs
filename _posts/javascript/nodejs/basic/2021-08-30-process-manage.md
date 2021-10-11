@@ -1,11 +1,14 @@
 ---
 title: Node.js中的进程管理 
-date: 2021-08-30 
+date: 2021-08-30
+sidebar: 'auto'
+categories:
+  - Javascript
 tags:
-    - Nodejs 
-    - process 
-    - cluster 
-    - child_process 
+  - Nodejs 
+  - process 
+  - cluster 
+  - child_process 
 author: huangtengfei 
 location: blog 
 summary: 本文主要对Node.js中进程管理相关的东西做一个简单介绍，包括 process 对象、child_process 模块和 cluster 模块，详细的 API 可以查看官方文档。

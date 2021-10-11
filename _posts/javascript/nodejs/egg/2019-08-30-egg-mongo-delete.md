@@ -1,10 +1,13 @@
 ---
 title: MongoDB 删除文档
 date: 2019-08-30
+sidebar: 'auto'
+categories:
+  - Javascript
 tags:
-    - Egg.js
-    - MongoDB
-    - Mongoose
+  - Egg.js
+  - MongoDB
+  - Mongoose
 author: ghostxbh
 location: blog
 summary: 使用Egg进行MongoDB 删除文档。

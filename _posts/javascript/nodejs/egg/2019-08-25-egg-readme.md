@@ -1,8 +1,11 @@
 ---
 title: Egg 示例
 date: 2019-08-25
+sidebar: 'auto'
+categories:
+  - Javascript
 tags:
-    - Egg.js
+  - Egg.js
 author: ghostxbh
 location: blog
 summary: Egg 示例。

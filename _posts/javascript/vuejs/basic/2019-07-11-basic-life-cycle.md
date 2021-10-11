@@ -1,8 +1,11 @@
 ---
 title: Vue.js生命周期
 date: 2019-07-11
+sidebar: 'auto'
+categories:
+  - Javascript
 tags:
-    - Vuejs
+  - Vuejs
 author: ghostxbh
 location: blog
 summary: Vue.js的生命周期。

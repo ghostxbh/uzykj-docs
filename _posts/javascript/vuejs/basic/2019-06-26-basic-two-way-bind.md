@@ -1,8 +1,11 @@
 ---
 title: Vue.js双向数据绑定
 date: 2019-06-26
+sidebar: 'auto'
+categories:
+  - Javascript
 tags:
-    - Vuejs
+  - Vuejs
 author: ghostxbh
 location: blog
 summary: 双向数据绑定基于**MVVM**框架，vue属于MVVM框架。

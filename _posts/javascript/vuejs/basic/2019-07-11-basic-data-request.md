@@ -1,10 +1,13 @@
 ---
 title: Vue.js数据请求
 date: 2019-07-11
+sidebar: 'auto'
+categories:
+  - Javascript
 tags:
-    - Vuejs
-    - axios
-    - jsonp
+  - Vuejs
+  - axios
+  - jsonp
 author: ghostxbh
 location: blog
 summary: Vue.js数据请求的几种方式。

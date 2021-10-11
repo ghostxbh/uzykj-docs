@@ -1,9 +1,12 @@
 ---
 title: Vue.js开发环境
 date: 2019-06-21
+sidebar: 'auto'
+categories:
+  - Javascript
 tags:
-    - Vuejs
-    - Vue-CLI
+  - Vuejs
+  - Vue-CLI
 author: ghostxbh
 location: blog
 summary: 搭建Vue.js的开发环境，及使用Vue-CLI脚手架命令。

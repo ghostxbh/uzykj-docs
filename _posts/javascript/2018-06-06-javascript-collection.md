@@ -1,13 +1,15 @@
 ---
 title: JavaScript目录
 date: 2018-06-06
+sidebar: 'auto'
+categories:
+  - Javascript
 tags:
-    - Nodejs
-    - Vuejs
-    - JavaScript
-    - HTML
-    - CSS
-    - 面试
+  - Nodejs
+  - Vuejs
+  - HTML
+  - CSS
+  - 面试
 author: ghostxbh
 location: blog
 summary: JavaScript目录。

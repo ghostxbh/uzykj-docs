@@ -1,9 +1,12 @@
 ---
 title: NodeJS编码规范
 date: 2021-09-28
+sidebar: 'auto'
+categories:
+  - Javascript
 tags:
-    - Nodejs
-    - Standard
+  - Nodejs
+  - Standard
 author: ghostxbh
 location: blog
 summary: NodeJS编码规范。
