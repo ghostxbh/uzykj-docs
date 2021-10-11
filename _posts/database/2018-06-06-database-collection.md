@@ -40,5 +40,7 @@ summary: 数据库系列目录。
 ## ClickHouse篇
 - [ClickHouse介绍及操作](clickhouse/2020-12-20-basic.md)
 
+## MongoDB篇
+- [MongoDB操作及使用](mongo/2021-10-11-use.md)
 
 <Vssue :title="$title" />
