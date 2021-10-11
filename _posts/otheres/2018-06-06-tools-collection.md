@@ -1,9 +1,12 @@
 ---
 title: 研发工具系列目录
 date: 2018-06-06
+sidebar: 'auto'
+categories:
+  - TSO
 tags:
-    - Tool
-    - Git
+  - Tool
+  - Git
 author: ghostxbh
 location: blog
 summary: 研发工具系列目录。

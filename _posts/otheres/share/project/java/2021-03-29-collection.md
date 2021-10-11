@@ -1,9 +1,12 @@
 ---
 title: Java项目收集
 date: 2021-03-29
+sidebar: 'auto'
+categories:
+  - TSO
 tags:
-    - Java
-    - JDK
+  - Java
+  - JDK
 author: ghostxbh
 location: blog
 summary: Java项目分享汇总。

@@ -1,8 +1,11 @@
 ---
 title: 大型项目的演进
 date: 2021-05-10
+sidebar: 'auto'
+categories:
+  - TSO
 tags:
-    - 项目
+  - 项目
 author: ruanyifeng
 location: blog
 summary: 大型项目的演进

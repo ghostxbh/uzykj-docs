@@ -1,8 +1,11 @@
 ---
 title: Node.js项目收集
 date: 2021-03-01
+sidebar: 'auto'
+categories:
+  - TSO
 tags:
-    - Nodejs
+  - Nodejs
 author: ghostxbh
 location: blog
 summary: Node.js项目收集。

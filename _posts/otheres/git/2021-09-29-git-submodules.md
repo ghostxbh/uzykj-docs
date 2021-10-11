@@ -1,11 +1,14 @@
 ---
 title: Git子模块
 date: 2021-09-29
+sidebar: 'auto'
+categories:
+  - TSO
 tags:
-    - Git
-    - submodule
-    - 版本控制
-    - 子模块
+  - Git
+  - submodule
+  - 版本控制
+  - 子模块
 author: ghostxbh
 location: blog
 summary: Git子模块允许你将一个Git仓库作为另一个Git仓库的子目录。它能让你将另一个仓库克隆到自己的项目中，同时还保持提交的独立。

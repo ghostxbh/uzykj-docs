@@ -1,8 +1,11 @@
 ---
 title: 分享系列
 date: 2018-06-06
+sidebar: 'auto'
+categories:
+  - TSO
 tags:
-    - share
+  - share
 author: ghostxbh
 location: blog
 summary: 分享系列。
@@ -19,8 +22,8 @@ summary: 分享系列。
 - [好文分享一期](artcle/javascript/2021-02-10-javascript01.md)
 
 ### 数据库
-- [MySQL文章汇总](../database/mysql/2021-03-29-mysql-blog.md)
-- [Redis文章汇总](../database/redis/2021-03-29-redis-blog.md)
+- [MySQL文章汇总](../../database/mysql/2021-03-29-mysql-blog.md)
+- [Redis文章汇总](../../database/redis/2021-03-29-redis-blog.md)
 
 
 ## 项目篇

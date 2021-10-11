@@ -1,8 +1,11 @@
 ---
 title: 工程项目工具
 date: 2021-07-12
+sidebar: 'auto'
+categories:
+  - TSO
 tags:
-    - Tool
+  - Tool
 author: ghostxbh
 location: blog
 summary: 工程项目工具。
