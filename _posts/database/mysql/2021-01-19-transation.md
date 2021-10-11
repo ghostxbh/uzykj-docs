@@ -1,18 +1,18 @@
 ---
 title: MySQL事务
 date: 2021-01-19
+sidebar: 'auto'
+categories:
+  - Database
 tags:
-    - MySQL
-    - 事务
-author: 编程界的小学生
-location: Gitee
+  - MySQL
+  - 事务
+author: ghostxbh
+location: blog
 ---
 # 事务
 
 ## 1、事务的四大特性
-
-​		**ACID**
-
 - 原子性
 
 > A Atomicity：要么都成功，要么都失败。

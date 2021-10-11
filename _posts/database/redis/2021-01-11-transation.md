@@ -1,11 +1,14 @@
 ---
 title: Redis事务
 date: 2021-01-11
+sidebar: 'auto'
+categories:
+  - Database
 tags:
-    - Redis
-    - 事务
-author: 编程界的小学生
-location: Gitee
+  - Redis
+  - 事务
+author: ghostxbh
+location: blog
 summary: Redis的事务并不像Mysql那么灵活，有隔离级别，出问题后还能回滚数据等高级操作。Redis毕竟是非关系型数据库，他目前事务回滚机制是不执行命令，也就是可以采取watch命令模拟乐观锁，进行监听数据，发现数据不是事务开始时候的样子了，那么我这个事务里的命令就不会得到执行。
 ---
 # 事务

@@ -1,8 +1,11 @@
 ---
 title: MySQL汇总
 date: 2021-03-02
+sidebar: 'auto'
+categories:
+  - Database
 tags:
-    - MySQL
+  - MySQL
 author: ghostxbh
 location: blog
 summary: MySQL汇总。

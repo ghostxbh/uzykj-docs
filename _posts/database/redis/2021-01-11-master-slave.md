@@ -1,11 +1,14 @@
 ---
 title: Redis主从集群
 date: 2021-01-11
+sidebar: 'auto'
+categories:
+  - Database
 tags:
-    - Redis
-    - 主从复制
-author: 编程界的小学生
-location: Gitee
+  - Redis
+  - 主从复制
+author: ghostxbh
+location: blog
 summary: 采取主从复制，用slave来做从节点，读写分离。主节点挂了的话从节点可以切换为主继续提供工作。哨兵方式的话可以自动故障切换。
 ---
 # 主从集群

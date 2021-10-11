@@ -1,10 +1,14 @@
 ---
 title: MySQL面试
 date: 2021-01-19
+sidebar: 'auto'
+categories:
+  - Database
 tags:
-    - MySQL
-author: 编程界的小学生
-location: Gitee
+  - MySQL
+  - 面试
+author: ghostxbh
+location: blog
 summary: MySQL面试收集。
 ---
 # 面试收集

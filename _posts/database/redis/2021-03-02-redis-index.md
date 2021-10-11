@@ -1,8 +1,11 @@
 ---
 title: Redis汇总
 date: 2021-03-02
+sidebar: 'auto'
+categories:
+  - Database
 tags:
-    - Redis
+  - Redis
 author: ghostxbh
 location: blog
 summary: Redis汇总。

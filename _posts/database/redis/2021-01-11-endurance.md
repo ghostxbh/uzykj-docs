@@ -1,10 +1,14 @@
 ---
 title: Redis持久化
 date: 2021-01-11
+sidebar: 'auto'
+categories:
+  - Database
 tags:
-    - Redis
-author: 编程界的小学生
-location: Gitee
+  - Redis
+  - 持久化
+author: ghostxbh
+location: blog
 summary: 持久化就是把内存的数据写到磁盘中去，防止服务宕机了内存数据丢失。
 ---
 # 持久化

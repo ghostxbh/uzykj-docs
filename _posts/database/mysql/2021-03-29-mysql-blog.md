@@ -1,9 +1,12 @@
 ---
 title: MySQL文章汇总
 date: 2021-03-29
+sidebar: 'auto'
+categories:
+  - Database
 tags:
-    - MySQL
-    - MVCC
+  - MySQL
+  - MVCC
 author: ghostxbh
 location: blog
 summary: MySQL文章汇总

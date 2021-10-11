@@ -1,10 +1,13 @@
 ---
 title: 数据库系列目录
 date: 2018-06-06
+sidebar: 'auto'
+categories:
+  - Database
 tags:
-    - MySQL
-    - Redis
-    - ClickHouse
+  - MySQL
+  - Redis
+  - ClickHouse
 author: ghostxbh
 location: blog
 summary: 数据库系列目录。

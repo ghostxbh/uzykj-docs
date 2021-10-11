@@ -1,9 +1,12 @@
 ---
 title: Redis文章汇总
 date: 2021-03-29
+sidebar: 'auto'
+categories:
+  - Database
 tags:
-    - Redis
-    - BitMap
+  - Redis
+  - BitMap
 author: ghostxbh
 location: blog
 summary: Redis文章汇总
