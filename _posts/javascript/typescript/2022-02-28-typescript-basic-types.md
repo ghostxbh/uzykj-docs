@@ -10,7 +10,7 @@ tags:
   - 基础特性
 author: tasaid
 location: blog
-summary: 从前几年热门的 MVC 一直到现在热门的 MVVM，我们发现无论是 MVC(Model-View-Controller) 还是 MVVM(Model-View-ViewModel)，我们始终抛不开一个关键的地方 —— 数据层：Model。
+summary: 从前几年热门的 MVC 一直到现在热门的 MVVM，我们发现无论是 MVC(Model-View-Controller) 还是 MVVM(Model-View-ViewModel)，我们始终抛不开一个关键的地方>数据层：Model。
 ---
   
 # 基础特性和类型推导
