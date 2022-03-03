@@ -5,60 +5,41 @@ sidebar: 'auto'
 categories:
   - Javascript
 tags:
-  - Nodejs
-  - Vuejs
+  - Node
+  - Vue
   - HTML
   - CSS
+  - JS
+  - Threejs
+  - TypeScript
   - 面试
 author: ghostxbh
 location: blog
 summary: JavaScript目录。
 ---
 # JavaScript目录
+## TypeScript
+- [TypeScript学习和总结](typescript/2022-02-24-typescript-readme.md)
 
 ## Nodejs
 ### 汇总
-- [Ubuntu安装新版本nodejs的5种姿势](nodejs/basic/2021-08-17-ubuntu-install-nodejs.md)
-
-### Egg.js
+- [Ubuntu安装nodejs](nodejs/basic/2021-08-17-ubuntu-install-nodejs.md)
 - [Egg示例](nodejs/egg/2019-08-25-egg-readme.md)
-- [MongoDB连接](nodejs/egg/2019-08-28-egg-mongo-connection.md)
-- [MongoDB创建数据库](nodejs/egg/2019-08-27-egg-mongo-createdb.md)
-- [MongoDB删除数据库](nodejs/egg/2019-08-29-egg-mongo-dropdb.md)
-- [MongoDB插入文档](nodejs/egg/2019-08-27-egg-mongo-create.md)
-- [MongoDB删除文档](nodejs/egg/2019-08-30-egg-mongo-delete.md)
-- [MongoDB修改文档](nodejs/egg/2019-08-30-egg-mongo-update.md)
-- [MongoDB查询文档](nodejs/egg/2019-08-27-egg-mongo-find.md)
-
 
 ## Vue.js
 ### 基础
-- [Vue.js开发环境](vuejs/basic/2019-06-21-basic-install.md)
-- [Vue.js属性绑定](vuejs/basic/2019-06-21-basic-bind-properties.md)
-- [Vue.js数据绑定](vuejs/basic/2019-06-26-basic-bind-data.md)
-- [Vue.js双向数据绑定](vuejs/basic/2019-06-26-basic-two-way-bind.md)
-- [Vue.js定义方法、对象事件](vuejs/basic/2019-06-26-basic-method-event.md)
-- [Vue.js组件](vuejs/basic/2019-07-01-basic-component.md)
-- [Vue.js数据请求](vuejs/basic/2019-07-11-basic-data-request.md)
-- [Vue.js生命周期](vuejs/basic/2019-07-11-basic-life-cycle.md)
-- [Vue.js父子组件传值](vuejs/basic/2019-07-11-basic-pass-value.md)
-### 项目组件
+- [Vue.js入门](vuejs/basic/2019-06-20-vuejs-readme.md)
 - [browserslist](vuejs/project/2021-07-02-browserslist.md)
 
-## HTML
+## 三剑客
+### HTML
 - [HTML Tips](html/2021-06-30-html-tips.md)
-
-## JS
+### CSS
+### JS
 - [高频 dom 操作和页面性能优化探索](js/2021-07-01-dom-optimization.md)
 
 ## Threejs
-- Threejs学习和总结基础篇
-    - [概述](threejs/2021-07-27-threejs-summary.md)
-    - [场景Scene](threejs/2021-07-27-threejs-scene.md)
-    - [几何体Geometry](threejs/2021-07-29-threejs-geometry.md)
-    - [材质Material](threejs/2021-08-04-threejs-material.md)
-    - [相机Camera](threejs/2021-08-05-threejs-camera.md)
-    - [粒子Points](threejs/2021-08-06-threejs-points.md)
+- [Threejs学习和总结基础篇](threejs/2021-07-26-threejs-readme.md)
 
 ## 规范
 - [JavaScript编码规范](style/2021-09-28-javascript-style.md)
